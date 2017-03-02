@@ -18,15 +18,20 @@ app.get('/', function(req, res) {
 	// ejs render automatically looks in the views folder
 	res.render('index');
 });
+app.get('/index', function(req, res) {
 
-app.get('/pages/apps', function(req, res) {
-
-	res.redirect('/pages/apps');
+	// ejs render automatically looks in the views folder
+	res.render('index');
 });
 
-app.get('/pages/article', function(req, res) {
+app.get('/apps', function(req, res) {
 
-	res.redirect('/pages/article');
+	res.render('apps');
+});
+
+app.get('/article', function(req, res) {
+
+	res.render('article');
 });
 
 app.listen(port, function() {
