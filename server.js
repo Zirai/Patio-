@@ -19,6 +19,16 @@ app.get('/', function(req, res) {
 	res.render('index');
 });
 
+app.get('/pages/apps', function(req, res) {
+
+	res.render('pages/apps');
+});
+
+app.get('/pages/article', function(req, res) {
+
+	res.render('pages/article');
+});
+
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
