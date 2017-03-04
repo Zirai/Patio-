@@ -1,0 +1,13 @@
+{
+	"name": "zirai-patio",
+	"description": "Year 2 Project",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"jade": "~1.0.4",
+		"express": "~4.9.8"
+	}
+}
+
