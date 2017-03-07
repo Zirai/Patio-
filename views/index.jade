@@ -8,6 +8,43 @@ html
     script(src='https://code.jquery.com/jquery-1.11.3.min.js')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='styles.css')
+    // 1. Load libraries
+    // IE required polyfill
+    script(src='node_modules/core-js/client/shim.min.js')
+    script(src='node_modules/zone.js/dist/zone.js')
+    script(src='node_modules/rxjs/bundles/Rx.js')
+    script(src='node_modules/@angular/core/bundles/core.umd.js')
+    script(src='node_modules/@angular/common/bundles/common.umd.js')
+    script(src='node_modules/@angular/compiler/bundles/compiler.umd.js')
+    script(src='node_modules/@angular/platform-browser/bundles/platform-browser.umd.js')
+    script(src='node_modules/@angular/platform-browser-dynamic/bundles/platform-browser-dynamic.umd.js')
+    // 2. Load our 'modules'
+    script(src='app/app.component.js')
+    script(src='app/app.module.js')
+    script(src='main.js')
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   body
     .wrapper.navbar-top
       .users.header
