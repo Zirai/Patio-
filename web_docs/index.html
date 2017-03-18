@@ -200,3 +200,87 @@
 </body>
 
 </html>
+
+
+doctype html
+html ng-app='PatioWeb'
+  head
+    title Welcome to Patio!
+    link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='../css/style.css')
+
+
+
+  body
+    .ng-view
+      .wrapper.navbar-top
+        .users.header
+          nav.navbar.navbar-default(role="navigation")
+            .content
+              div
+                .navbar-header
+                  button.navbar-toggle.custom-bulid.collapsed(aria-controls='navbar', aria-expanded='false', data-target='#navbar', data-toggle='collapse', type='button')
+                    span.sr-only Toggle navigation
+                    span.bar
+                    span.bar
+                    span.bar
+                    span.bar
+                  a.navbar-brand(href="#") Patio
+
+                #navbar-inverse.navbar-collapse.collapse
+                  ul.nav.navbar-nav.navbar-right
+                    li
+                      a.header-link(href='index') Home
+                    li
+                      a.header-link(href='apps') Apps
+                    li
+                      a.header-link(href='article') Article 
+                    li
+                      a.signup-link(data-toggle='modal', data-target='#signup', href='#') Login
+                    li
+                      a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
+      header
+        .header-content
+          .header-content-inner
+            h1(style="font-size:40px;")  Patio Banner
+            hr
+            p
+              | Take a look around and put your left nuts out
+
+
+
+
+
+      .users.footer
+        .content
+          .columns
+            .column.patio
+              .title
+                h4 Patio
+                .underline
+              ul.footer-links
+                li
+                  a.link(href='#') About us
+                li
+                  a.link(href='#') Contact us
+                li
+                  a.link(href='#') Blog
+                li
+                  a.link(href='#') Join us
+
+            .column.about-us
+              .title
+                h4 About Us
+                .underline
+              p.text Hi Hello and Bye
+              
+     
+
+    // 2. Load our 'modules'
+    script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+    script(src='https://code.jquery.com/jquery-1.11.3.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+    script(src='node_modules/angular/angular.js')
+    script(src='node_modules/angular-route/angular-route.js')
+    script(src='server.js') 
