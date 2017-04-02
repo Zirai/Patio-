@@ -1,0 +1,22 @@
+.comment-item {
+  border-top: solid 1px #404040;
+  padding: 30px 0; }
+  .comment-item:first-child {
+    border-top: 0; }
+  .comment-item .comment-info .comment-user {
+    color: #ccc;
+    font-family: Lato;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 1.76; }
+  .comment-item .comment-info .comment-time {
+    color: #afafaf;
+    font-family: Lato;
+    font-size: 15px;
+    line-height: 2;
+    margin-left: 8px; }
+  .comment-item .comment-content {
+    color: #969696;
+    font-family: Lato;
+    font-size: 16px;
+    line-height: 1.38; }

@@ -1,6 +1,4 @@
-angular.module('PatioWeb', ['ngRoute'])
-.config(config)
-.controller('PatioController', PatioController );
+angular.module('PatioWeb', ['ngRoute']).config(config);
 
 function config($routeProvider) {
 	$routeProvider
@@ -15,8 +13,3 @@ function config($routeProvider) {
 	});
 }
 
-function PatioController() {
-	var vm =this;
-	vm.title = 'Patio Web';
-
-}

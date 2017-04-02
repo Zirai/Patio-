@@ -1,0 +1,47 @@
+.back-option {
+  margin: 15px;
+
+  .back-option-body {
+    background-color: #3b3b3b;
+    border: solid 1px #252525;
+    border-radius: 5px;
+    padding: 20px;
+
+    .back-option-title {
+      color: #8f72ff;
+      font-family: Lato;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.5;
+      margin-bottom: 8px;
+    }
+
+    .back-option-content {
+      color: #fff;
+      font-family: Lato;
+
+      ul {
+        padding-left: 20px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.53;
+        margin: 0;
+      }
+
+      .back-option-subtitle {
+        font-family: Lato;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 1.28;
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  .back-option-action {
+    margin-top: 10px;
+  }
+
+}
