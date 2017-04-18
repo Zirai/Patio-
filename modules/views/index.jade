@@ -4,7 +4,8 @@ html(ng-app='PatioWeb')
     title Welcome to Patio!
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
-  body(ng-app='view')
+  body
+    
     .users.footer
       .content
         .columns
@@ -38,4 +39,52 @@ html(ng-app='PatioWeb')
     script(src='node_modules/angular/angular.js')
     script(src='node_modules/angular-route/angular-route.js')
     script(src='server.js') 
-    script(src="views/controller/home.client.controller.js")
+    script(src="modules/controller/home.client.controller.js")
+    script(src="public/js/bootstrap.min.js")
+
+
+
+  <div class="featured-section" flex="100" layout="column" layout-gt-sm="row"
+  layout-align="space-between">
+    <div class="featured-projects" flex="100" flex-gt-sm="30">
+      <div flex class="featured-view" layout="row" layout-align="center center" style="border-left:10px solid #51d5de; color:#51d5de;">
+          Featured Artist
+      </div>
+      <div flex class="featured-view"layout="row" layout-align="center center">
+          Top Artist Funded
+      </div>
+      <div flex class="featured-view" layout="row" layout-align="center center">
+          Top Projects
+      </div>      
+    </div>
+    <div class ="featured-container" flex="100" flex-gt-sm="70">
+      <slick settings="vm.slickConfig" slides-to-show="1" slides-to-scroll="1">
+        <div class="featured-item" ng-repeat="f in vm.featured" >
+          <img class="featured-cover" ng-src={{f.cover}}>
+          <div class="featured-info" layout="column" layout-align="left">
+            <p class="featured-type white-text">{{f.type}}</p>
+            <p class="featured-name white-text">{{f.name}}</p>
+            <p class="featured-description">{{f.description}}</p>
+            <md-button class="md-raised featured-action" ng-href={{f.actionURL}}><span class="button-text">View</span></md-button>
+          </div>
+        </div>
+      </slick>
+    </div>
+  </div>
+
+
+  //====
+// .featured-projects {
+//     background-color: #363636;
+//     font-family: Lato;
+//     font-size: 20px;
+//     font-weight: bold;
+//     letter-spacing: 0.8px;
+//     color: #b2b2b2;
+    
+//     .featured-view{
+//       line-height: 100px;
+//       border-bottom:1px solid #e5e5e5;
+
+//     }
+// }

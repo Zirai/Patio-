@@ -4,7 +4,73 @@ html(ng-app='PatioWeb')
     title Welcome to Patio!
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
-  body(ng-app='view')
+  body
+    nav.navbar.navbar-default
+      .container-fluid
+        .navbar-header
+          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+            span.sr-only Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.navbar-brand(href='index') PatioWeb
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            li.active
+              a(href='index')
+                | Home
+                span.sr-only (current)
+            li
+              a(href='apps') Apps
+            li
+              a(href='article') Article
+          ul.nav.navbar-nav.navbar-right
+            li
+              a.signup-link(data-toggle='modal', data-target='#signup', href='#') Login
+            li
+              a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
+
+    header.jumbotron
+      .header-content
+        .header-content-inner
+          h1(style="font-size:40px;")  Patio Banner
+          hr
+          p
+            | Take a look around and put your left nuts out
+    .row
+      .col-md-4
+        h2 Annoucement
+        p
+          | HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.
+        p
+          a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
+      .col-md-4
+        h2 Information
+        p
+          | CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.
+        p
+          a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
+      .col-md-12
+        h2 Blog Post
+        p
+          | Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can create web your own website with much less efforts.
+        p
+          a.btn.btn-success(href='http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
+      .col-md-4
+        h2 Top 10 Apps
+        p
+          | HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.
+        p
+          a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
+      .col-md-4
+        h2  Featured Apps
+        p
+          | CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.
+        p
+          a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
+
+              
+    
     .users.footer
       .content
         .columns
@@ -38,4 +104,5 @@ html(ng-app='PatioWeb')
     script(src='node_modules/angular/angular.js')
     script(src='node_modules/angular-route/angular-route.js')
     script(src='server.js') 
-    script(src="views/controller/home.client.controller.js")
+    script(src="modules/controller/home.client.controller.js")
+    script(src="public/js/bootstrap.min.js")

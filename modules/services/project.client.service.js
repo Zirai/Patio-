@@ -3,13 +3,13 @@
 
   // Users service used for communicating with the users REST endpoint
   angular
-    .module('project.services')
-    .factory('ProjectService', Service);
+    .module('home.services')
+    .factory('homeService', Service);
 
   Service.$inject = ['$resource'];
 
   function Service($resource) {
-    var project = $resource('/api/project', {}, {
+    var home= $resource('/api/home', {}, {
       update: {
         method: 'PUT'
       }
