@@ -1,10 +1,10 @@
-angular.module('PatioWeb').controller('PatioController', PatioController);
+var PatioWeb = angular.module('PatioWeb');
 
-function PatioController($http) {
-    var vm = this;
-    vm.title = 'Patio Web';
-    $http.get('/views').then(function(response) {
-        console.log(response);
+PatioWeb.controller('homeController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
+  console.log('home loaded')
+  $scope.getHome = function(){
+    $http.get('/api/home').success(function(response){
+      $scope.home= response;
     });
- 
-}
+  }
+}]);

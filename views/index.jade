@@ -34,6 +34,8 @@ html(ng-app='PatioWeb')
       .header-content
         .header-content-inner
           h1(style="font-size:40px;")  Patio Banner
+          input(ng-model='test')
+          | {{test}}
           hr
           p
             | Take a look around and put your left nuts out
@@ -101,8 +103,8 @@ html(ng-app='PatioWeb')
     script(src='https://code.jquery.com/jquery-1.11.3.min.js')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
     script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-    script(src='node_modules/angular/angular.js')
-    script(src='node_modules/angular-route/angular-route.js')
+    script(src='/bower_components/angular/angular.js')
+    script(src='/bower_components/angular-route/angular-route.js')
     script(src='server.js') 
-    script(src="modules/controller/home.client.controller.js")
-    script(src="public/js/bootstrap.min.js")
+    script(src="/main.js")
+    script(src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
