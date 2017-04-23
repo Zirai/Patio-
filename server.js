@@ -23,6 +23,7 @@ app.use(function(req, res, next) {
 
 // add some routing
 app.use('/api', routes);
+// commented out from causing error for now
 
 // set the home page route
 app.get('/', function(req, res) {
