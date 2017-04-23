@@ -5,6 +5,10 @@
 	"scripts": {
 		"start": "node server.js"
 	},
+	"repository": {
+    "type": "git",
+    "url": "https://github.com/Zirai/PatioWeb"
+	},
 	"license": "MIT",
 	"dependencies": {
 		"jade": "~1.11.0",

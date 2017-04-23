@@ -14,38 +14,17 @@ html, body{
   width: 100%;
   font-family: "";
 }
-
-
-
-
-
+.jumbotron{
+	margin:0 auto;
+	width:100%;
 }
 
-.wrapper{
-	min-height: 80vh;
-}
+
+
+
 
 /*Header*/
-.users.header{
-	height: 75px;
-	position: fixed;
-	width: 100%;
-	z-index: 5;
-}
-.users.header .content{
-	max-width: 1200px;
-	margin: 0 auto;
-}
-.users.header span.bar{
-	display: block;
-	position: absolute;
-	height: 3px;
-	width: 100%;
-	background: #CC3349;
-	border-radius: 9px;
-	opacity: 1;
-	left: 0;
-}
+
 
 .navbar-top {
 	top: 0;
@@ -88,7 +67,7 @@ html, body{
 	margin: 21px 15px 17px;
 	text-shadow: none;
 	display: none;
-	float: right;'
+	float: right;
 	padding: 7px 10px;
 }
 .btn{
@@ -119,7 +98,7 @@ html, body{
 
 .navbar-top .brand{
 	padding: 20px 28px 20px 32px;
-	color: #526476
+	color: #526476;
 	margin-left:0;
 	float: left;
 	display: block;
@@ -152,10 +131,10 @@ html, body{
 }
 
 .navbar-collapse.collapse{
-  display: block
-  height: auto
+  display: block;
+  height: auto;
   padding-bottom: 0;
-  overflow: visible
+  overflow: visible;
 }
 .navbar-collapse{
   width:auto;
@@ -172,13 +151,12 @@ header{
 	text-align: center;
 	background-color: grey;
 	background-position: center;
-
 }
 
 header .header-content{
 	position: absolute;
 	top: 50%;
-	padding:  0 50px
+	padding:  0 50px;
 	width:100%;
 	text-align: center;
 }
@@ -207,13 +185,35 @@ header .header-content .header-content-inner p{
 	margin-left: auto;
 	max-width: 80%;
 	margin-bottom: 50px;
-	margin:0 0 10px;
+
 }
 
+#hero{
+	width:100%;
+	position: relative;
+	margin: 0 auto;
+}
 
+figure{
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
 
-
-
+#hero a.inner figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 300ms ease-out;
+    -webkit-transition: all 300ms ease-out;
+    -webkit-transform: translateZ(0);
+}
 
 
 
@@ -240,7 +240,7 @@ header .header-content .header-content-inner p{
 }
 
 .users.footer .title h4{
-	margin: 0px
+	margin: 0px;
 	padding:10px 0;
 	color: #d8dade;
 	font-size: 18px;
