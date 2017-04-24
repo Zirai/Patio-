@@ -30,46 +30,57 @@ html(ng-app='PatioWeb')
             li
               a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
 
-    header.jumbotron
-      .header-content
-        .header-content-inner
-          h1(style="font-size:40px;")  Patio Banner
-          input(ng-model='test')
-          | {{test}}
-          hr
+    .content-top
+      section.first-section
+        .container
+          .row
+            .col-sm-12
+              .intro
+                img.intro__logo.visible-xs(src='', alt='')
+                h2.intro__heading.h1.hidden-xs
+                  | Welcome To 
+                  br.visible-sm
+                  | Patio Web
+                h4.intro__subheading
+                  | The simplest way to get your teach kids. 
+                  em Guaranteed
+                  | .
+    .row.section-info
+      .section-one
+        .col-md-6
+          h2 Annoucement
           p
-            | Take a look around and put your left nuts out
-    .row
-      .col-md-4
-        h2 Annoucement
-        p
-          | HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.
-        p
-          a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
-      .col-md-4
-        h2 Information
-        p
-          | CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.
-        p
-          a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
-      .col-md-12
-        h2 Blog Post
-        p
-          | Bootstrap is a powerful front-end framework for faster and easier web development. The Bootstrap tutorial section will help you learn the techniques of Bootstrap so that you can create web your own website with much less efforts.
-        p
-          a.btn.btn-success(href='http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
-      .col-md-4
-        h2 Top 10 Apps
-        p
-          | HTML is a markup language that is used for creating web pages. The HTML tutorial section will help you understand the basics of HTML, so that you can create your own web pages or website.
-        p
-          a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
-      .col-md-4
-        h2  Featured Apps
-        p
-          | CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.
-        p
-          a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
+            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
+          p
+            a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
+        .col-md-6
+          h2 Information
+          p
+            | CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.
+          p
+            a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
+
+      .section-two    
+        .col-md-12
+          h2 Blog Post
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
+          p
+            a.btn.btn-success(href='http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
+
+      .section-three  
+        .col-md-6
+          h2 Top 10 Apps
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
+          p
+            a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
+        .col-md-6
+          h2  Featured Apps
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
+          p
+            a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
 
               
     
