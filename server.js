@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
-var routes = require('./api/routes');
+var apiRoute = require('./api/apiRoute');
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -22,8 +22,7 @@ app.use(function(req, res, next) {
 });
 
 // add some routing
-app.use('/api', routes);
-// commented out from causing error for now
+app.use('/api', apiRoute);
 
 // set the home page route
 app.get('/', function(req, res) {
