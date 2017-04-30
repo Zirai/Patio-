@@ -1,4 +1,4 @@
-var dbconn = require('../data/dbconnection.js');
+var dbconn = require('../data/db.js');
 var appData = require('../data/app-data.json');
 
 // return app app data in the json
