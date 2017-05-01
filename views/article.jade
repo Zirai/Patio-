@@ -5,30 +5,28 @@ html(ng-app='PatioWeb')
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
   body
-    nav.navbar.navbar-default
-      .container-fluid
-        .navbar-header
-          button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
-            span.sr-only Toggle navigation
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='index') PatioWeb
-        #bs-example-navbar-collapse-1.collapse.navbar-collapse
-          ul.nav.navbar-nav
-            li.active
-              a(href='index')
-                | Home
-                span.sr-only (current)
-            li
-              a(href='apps') Apps
-            li
-              a(href='article') Article
-          ul.nav.navbar-nav.navbar-right
-            li
-              a.signup-link(data-toggle='modal', data-target='#signup', href='#') Login
-            li
-              a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
+    nav.navbar.navbar-default.navbar-fixed-top
+      .navbar-inner
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='index') PatioWeb
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='index') Home
+              li
+                a(href='apps') Apps
+              li
+                a(href='article') Article
+            ul.nav.navbar-nav.navbar-right
+              li
+                a.signup-link(data-toggle='modal', data-target='#signup', href='#') Login
+              li
+                a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
 
     .article
       .wrapped-content
@@ -118,13 +116,13 @@ html(ng-app='PatioWeb')
               
      
 
-    // 2. Load our 'modules'
-    //script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
-    script(src='public/lib/jquery/dist/jquery.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-    script(src='/lib/angular/angular.js')
-    script(src='/lib/angular-route/angular-route.js')
-    script(src='server.js') 
-    script(src='views/main.js')
-    script(src='/js/bootstrap.js')
+    //- // 2. Load our 'modules'
+    //- //script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+    //- //script(src='public/lib/jquery/dist/jquery.js')
+    //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    //- script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+    //- script(src='/lib/angular/angular.js')
+    //- script(src='/lib/angular-route/angular-route.js')
+    //- script(src='server.js') 
+    //- script(src='views/main.js')
+    //- script(src='/js/bootstrap.js')
