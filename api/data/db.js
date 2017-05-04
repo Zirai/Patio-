@@ -36,3 +36,8 @@ process.once('SIGUSR2', function() {
         process.kill(process.pid, 'SIGUSR2');
     });
 });
+
+// bring in schemas and models
+require('./app.model.js');
+require('./article.model.js');
+require('./user.model.js');
