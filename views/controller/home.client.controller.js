@@ -1,9 +1,16 @@
-var PatioWeb = angular.module('PatioWeb');
+angular.module('PatioWeb').controller('homeController', homeController).controller('AppsController', AppsController).controller('ArticleController', ArticleController) 
 
-PatioWeb.controller('homeController', ['$scope', '$http', '$location', '$routeParams', function($scope, $http, $location, $routeParams){
-  $scope.getHome = function(){
-    $http.get('/api/home').success(function(response){
-      $scope.home = response;
-    });
-  }
-}]);
+function homeController(){
+  var vm = this;
+  vm.name = 'Patio Main';
+}
+
+function ArticleController(){
+  var vm = this;
+  vm.name = 'Article view';
+}
+
+function AppsController(){
+  var vm = this;
+  vm.name = 'Apps view';
+}

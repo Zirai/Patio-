@@ -6,6 +6,9 @@ var appSchema = new mongoose.Schema({
         required : true,
         unique : true
     },
+    image : {
+	url : String
+    },
     createdOn : {
         type : Date,
         "default" : Date.now

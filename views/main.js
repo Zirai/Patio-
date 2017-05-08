@@ -1,23 +1,26 @@
-// var PatioWeb = angular.module('PatioWeb', ['ngRoute']);
+angular.module('PatioWeb', ['ngRoute']).config(config);
 
-// PatioWeb.config(function($routeProvider){
-//   $routeProvider.when('/', {
-//     controller:'homeController',
-//     templateUrl: 'views/index.jade'
-//   })
-//   .when('/home', {
-//     controller:'homeController',
-//     templateUrl: 'views/index.jade'
-//   })
-//   .when('/home/articles/:articleID', {
-//     controller:'homeController',
-//     templateUrl: 'views/article.jade'
-//   })
-//   .when('/home/apps/:appsID', {
-//     controller:'homeController',
-//     templateUrl: 'views/apps.jade'
-//   })
-//   .otherwise({
-//     redirectTo: '/'
-//   });
-// });
+function config($routeProvider) {
+  $routeProvider.when('/', {
+    controller:'homeController',
+    templateUrl: 'views/index.jade',
+    controllerAs: 'vm'
+  })
+  // .when('/home', {
+  //   controller:'homeController',
+  //   templateUrl: 'views/index.jade'
+  // })
+  .when('/articles', {
+    controller:'ArticleController',
+    templateUrl: 'views/article.jade',
+    controllerAs: 'vm'
+  })
+  .when('/apps', {
+    controller:'AppsController',
+    templateUrl: 'views/apps.jade',
+    controllerAs: 'vm'
+  })
+  .otherwise({
+    redirectTo: '/'
+  });
+};

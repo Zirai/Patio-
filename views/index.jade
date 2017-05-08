@@ -1,10 +1,9 @@
-doctype html
-html(ng-app='PatioWeb')
+html(lang='en')
   head
     title Welcome to Patio!
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
-  body
+  body(ng-app='PatioWeb')
     nav.navbar.navbar-default.navbar-fixed-top
       .navbar-inner
         .container
@@ -38,7 +37,7 @@ html(ng-app='PatioWeb')
                 h2.intro__heading.h1.hidden-xs
                   | Welcome To 
                   br.visible-sm
-                  | Patio Web
+                  | {{vm.name}}
                 h4.intro__subheading
                   | The simplest way to teach kids. 
                   em Guaranteed
@@ -82,48 +81,6 @@ html(ng-app='PatioWeb')
                 | ”
               .source
                 img(alt='', src='')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     .row.section-info
       .section-one
@@ -189,13 +146,15 @@ html(ng-app='PatioWeb')
               
      
 
-    // 2. Load our 'modules'
-    //script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
-    script(src='public/lib/jquery/dist/jquery.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
-    script(src='/lib/angular/angular.js')
-    script(src='/lib/angular-route/angular-route.js')
-    script(src='server.js') 
-    script(src='views/main.js')
-    script(src='/js/bootstrap.js')
+  // 2. Load our 'modules'
+  //script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+  //script(src='public/lib/jquery/dist/jquery.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js')
+  script(src='/js/bootstrap.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js') 
+  script(src='/main.js')
+  script(src='/controller/home.client.controller.js')
+
