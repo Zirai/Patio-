@@ -1,9 +1,9 @@
-html(lang='en')
+html(ng-app='PatioWeb')
   head
     title Welcome to Patio!
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
-  body(ng-app='PatioWeb')
+  body
     nav.navbar.navbar-default.navbar-fixed-top
       .navbar-inner
         .container
@@ -155,6 +155,6 @@ html(lang='en')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js')
   script(src='/js/bootstrap.js')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js') 
-  script(src='/main.js')
-  script(src='/controller/home.client.controller.js')
-
+  //script(src='views/main.js')
+  script(src='/javascripts/home.client.controller.js')
+  script(src='/javascripts/main.js')

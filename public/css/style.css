@@ -26,7 +26,7 @@ html, body{
 .content-top{
 	margin:0 auto;
 	width:100%;
-	min-height: 100%;
+	min-height: 600px;
 	position: relative;
 	padding: 0;
 	overflow: hidden;
@@ -36,15 +36,14 @@ html, body{
 	background-attachment:fixed;
 }
 
-.row{
-    margin-left: -15px;
-    margin-right: -15px;
-}
 .intro{
 	text-align: center;
 	margin: 0 0 90px;
-	margin-top: 250px;
 	color: black;
+	
+}
+.intro-home{
+	padding-top: 250px;
 }
 
 .intro__heading.h1.hidden-xs{
@@ -134,6 +133,210 @@ html, body{
 	min-height: 300px;
 
 }
+
+/*=====================================Background text*/
+
+
+
+
+#hero{
+	width:100%;
+	position: relative;
+	margin: 0 auto;
+}
+
+figure{
+	-webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
+
+#hero a.inner figure {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-position: 50% 15%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all 300ms ease-out;
+    -webkit-transition: all 300ms ease-out;
+    -webkit-transform: translateZ(0);
+}
+
+
+
+
+/*===================================================Footer*/
+.users.footer
+{
+	padding: 20px;
+	background-color:#303236;
+}
+.users.footer .content{
+	max-width: 1200px;
+	margin:0 auto;
+}
+
+.users.footer .columns{
+	display: flex;
+}
+
+
+.users.footer .content .column{
+	padding: 20px 30px;
+
+}
+
+.users.footer .title h4{
+	margin: 0px;
+	padding:10px 0;
+	color: #d8dade;
+	font-size: 18px;
+}
+.users.footer .patio .underline{
+	width: 30px;
+	height: 5px;
+	border-bottom: 2px solid #B54321;
+}
+
+.users.footer .patio .footer-links{
+	margin: 0;
+	padding: 30px 0 0;
+}
+
+.users.footer .patio .footer-links li{
+	margin: 0px 20px 15px 0;
+	display: block;
+}
+
+.users.footer .about-us .text{
+	padding: 30px 0 0;
+}
+
+.users.footer .about-us .text p{
+	margin: 0 0 10px;
+	display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*==============================================================================================Apps CSS*/
+#ff-catalog-header {
+	background-image: url("../img/catalog_background.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+
+.container.topapps {
+	padding-bottom: 30px;
+	max-width:700px;
+}
+
+.content{
+	max-width:400px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 20px;
+}
+
+.ff-heavy{
+	text-align: center;
+}
+
+.content img{
+	vertical-align: middle;
+	border: 0;
+}
+
+.ff-heavy h1{
+	font-weight: 800;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	line-height: 1.1;
+	font-size: 40px;
+}
+.ff-heavy p{
+	color: #464648;
+	margin: 0 0 10px;	
+	font-size: 15px;
+}
+
+.ff-appcover{
+	width: 33.33333%;
+	padding: 10px;
+}
+.topapps.ff-appcover img.thumb{
+	bottom: 10px;
+	right: 10px;
+}
+
+.topapps.ff-appcover img.thumb{
+	width: 25%;
+	position: absolute;
+}
+
+.ff-appcover{
+	float: left;
+	position: relative;
+	min-height: 1px;
+}
+
+.ff-appcover a{
+	background: 0 0;
+}
+
+.ff-appcover img.thumb{
+	width: 100%;
+	box-shadow: 3px 3px 8px 0px #6b6b6b;
+}
+
+img{
+	vertical-align: middle;
+	border: 0;
+}
+
+
+
+/*=================================================================article page*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -254,92 +457,8 @@ html, body{
 
 
 
-/*Background text*/
 
 
-
-
-#hero{
-	width:100%;
-	position: relative;
-	margin: 0 auto;
-}
-
-figure{
-	-webkit-margin-before: 1em;
-    -webkit-margin-after: 1em;
-    -webkit-margin-start: 40px;
-    -webkit-margin-end: 40px;
-}
-
-#hero a.inner figure {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-position: 50% 15%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    transition: all 300ms ease-out;
-    -webkit-transition: all 300ms ease-out;
-    -webkit-transform: translateZ(0);
-}
-
-
-
-
-/*Footer*/
-.users.footer
-{
-	padding: 20px;
-	background-color:#303236;
-}
-.users.footer .content{
-	max-width: 1200px;
-	margin:0 auto;
-}
-
-.users.footer .columns{
-	display: flex;
-}
-
-
-.users.footer .content .column{
-	padding: 20px 30px;
-
-}
-
-.users.footer .title h4{
-	margin: 0px;
-	padding:10px 0;
-	color: #d8dade;
-	font-size: 18px;
-}
-.users.footer .patio .underline{
-	width: 30px;
-	height: 5px;
-	border-bottom: 2px solid #B54321;
-}
-
-.users.footer .patio .footer-links{
-	margin: 0;
-	padding: 30px 0 0;
-}
-
-.users.footer .patio .footer-links li{
-	margin: 0px 20px 15px 0;
-	display: block;
-}
-
-.users.footer .about-us .text{
-	padding: 30px 0 0;
-}
-
-.users.footer .about-us .text p{
-	margin: 0 0 10px;
-	display: block;
-}
 
 /* Navbar New ill use do not delete
 .navbar-default {

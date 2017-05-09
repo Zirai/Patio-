@@ -1,16 +1,12 @@
-angular.module('PatioWeb', ['ngRoute']).config(config);
+var PatioWeb = angular.module('PatioWeb', ['ngRoute']);
 
-function config($routeProvider) {
-  $routeProvider.when('/', {
+PatioWeb.config(function($routeProvider) {
+  $routeProvider.when('/home', {
     controller:'homeController',
     templateUrl: 'views/index.jade',
     controllerAs: 'vm'
   })
-  // .when('/home', {
-  //   controller:'homeController',
-  //   templateUrl: 'views/index.jade'
-  // })
-  .when('/articles', {
+  .when('/article', {
     controller:'ArticleController',
     templateUrl: 'views/article.jade',
     controllerAs: 'vm'
@@ -22,5 +18,5 @@ function config($routeProvider) {
   })
   .otherwise({
     redirectTo: '/'
-  });
-};
+  })
+});

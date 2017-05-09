@@ -27,16 +27,37 @@ html(ng-app='PatioWeb')
                 a.signup-link(data-toggle='modal', data-target='#signup', href='#') Login
               li
                 a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
+                
+    #ff-catalog-header
+      .gradient
+        .container
+          .ff-heavy.content
+            img(alt='Catalog_bird', src='/assets/catalog_bird-8a28bcfe5a94b280efa13676bdad36be.gif')
+            h1 Discover Unlimited Apps
+            p(style='padding-bottom: 20px;')
+              | Unlimited access to over apps
+              br
+              | means story time never has to end.
+        .container.topapps
+          .ff-appcover
+            a(href='')
+              img.thumb(alt='Miss Applebottom', src='https://cdn.farfaria.com/uploads/story/cover_art/537aa6fc884c17adf6000001/small_320_0-Cover1v6-MissApplebottom-VShing-EFerrer.jpg')
+          .ff-appcover
+            a(href='')
+              img.thumb(alt='Crab Caper', src='https://cdn.farfaria.com/uploads/story/cover_art/55230ce90fd80ca9ce000001/small_320_0-Final-Cover-CrabCaper-JBlessing-EFerrer.jpg')
+          .ff-appcover
+            a(href='')
+              img.thumb(alt='Luke and Lexi Ladybug', src='https://cdn.farfaria.com/uploads/story/cover_art/5006f2a25cb6950002000008/small_320_luke_and_lexi_1_9614.jpg')
+          
 
+    section#learn-more.listApp.bg-apps
+      header.intro.intro-apps
+        .container
+          h1 Everything you need to drive your kids to be better
+          p
+            | PatioWeb helps you teach your kids and to be more realistic thinker
 
-  section#learn-more.listApp.bg-apps
-    header.intro.intro-apps
-      .container
-        h1 Everything you need to drive your kids to be better
-        p
-          | PatioWeb helps you teach your kids and to be more realistic thinker
-
-      #products.row.list-group
+    #products.row.list-group
       .item.col-xs-4.col-lg-4
         .thumbnail
           img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
@@ -127,7 +148,7 @@ html(ng-app='PatioWeb')
                   | $21.000
               .col-xs-12.col-md-6
                 a.btn.btn-success(href='http://www.jquery2dotnet.com') Add to cart
-                      
+                    
     
     .users.footer
       .content

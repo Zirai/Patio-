@@ -18,6 +18,12 @@ app.set('view engine', 'jade');
 // make express look in the public directory for assets (css/js/img)
 app.use(express.static(__dirname + '/public'));
 
+app.use("/javascripts", express.static("./public/js"));
+
+
+//set the angular directory
+app.set('views', __dirname + '/views');
+
 // add middleware to console log every request
 app.use(function(req, res, next) {
 	console.log(req.method, req.url);
