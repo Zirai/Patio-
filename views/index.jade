@@ -3,8 +3,10 @@ html(ng-app='PatioWeb')
     title Welcome to Patio!
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
   body
-    nav.navbar.navbar-default.navbar-fixed-top
+    nav.navbar.navbar-default.navbar-fixed-top.nav-color
       .navbar-inner
         .container
           .navbar-header
@@ -27,21 +29,24 @@ html(ng-app='PatioWeb')
               li
                 a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
 
-    .content-top
-      section.first-section
+    #ff-home-leader.ff-fullheight(style='height: 785px;')
+      .ff-fullheight-vertical.middle
         .container
-          .row
-            .col-sm-12
-              .intro.intro-home
-                img.intro__logo.visible-xs(src='', alt='')
-                h2.intro__heading.h1.hidden-xs
-                  | Welcome To 
-                  br.visible-sm
-                  | {{vm.name}}
-                h4.intro__subheading
-                  | The simplest way to teach kids. 
-                  em Guaranteed
-                  | .
+          .ff-fullheight-text.right.ff-heavy
+            h1
+              | Long time ago
+              br
+              | in the Palm of Their Hands
+            p.ff-ignore-linebreaks-360px
+              | On the go, or tucked in tight,
+              br
+              | PatioWeb unleashes magics for the lil ones.
+              br
+            p
+              a.btn.btn-default.btn-patio.btn-lg(href='#downloadModal', data-toggle='modal', role='button')
+                | Get the App 
+                span.glyphicon.glyphicon-play
+
     #ff-home-testimonials.ff-testimonial-carousel.bear-background.ff-blue-module.carousel.slide(data-ride='carousel', data-pause='false', data-interval='4000')
       // Indicators
       ol.carousel-indicators
@@ -82,42 +87,47 @@ html(ng-app='PatioWeb')
               .source
                 img(alt='', src='')
 
-    .row.section-info
-      .section-one
-        .col-md-6
-          h2 Annoucement
-          p
-            |Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
-          p
-            a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
-        .col-md-6
-          h2 Information
-          p
-            | CSS is used for describing the presentation of web pages. The CSS tutorial section will help you learn the essentials of CSS, so that you can fine control the style and layout of your HTML document.
-          p
-            a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
+    section#how-it-works.section.section--steps
+      .container.cont-top
+        .row
+          .col-sm-12.col-lg-10.col-lg-push-1
+            .step
+              .row
+                .row__parallel-sm.row__parallel-md.row__parallel-lg
+                  .col-sm-5.col-sm-push-7.col-md-4.col-md-push-8
+                    .step__icon
+                      i.icon.icon--lg.icon--step-gurantee
+                  .col-sm-7.col-sm-pull-5.col-md-8.col-md-pull-4
+                    h2.step__heading Kids Education
+                    p.step__caption.h5
+                      | Free play and guided play—together known as playful learning—are pedagogical tools through which children can learn in joyful and conceptually rich ways
+  
+        .row
+          .col-sm-12.col-lg-10.col-lg-push-1
+            .step
+              .row
+                .row__parallel-sm.row__parallel-md.row__parallel-lg
+                  .col-sm-5.col-md-4
+                    .step__icon
+                      i.icon.icon--lg.icon--step-quote
+                  .col-sm-7.col-md-8
+                    h2.step__heading Parenting
+                    p.step__caption.h5
+                      | Guided play helps children learn to solve problems, persist through challenges, build vocabulary skills, and gain background knowledge in many content areas
 
-      .section-two    
-        .col-md-12
-          h2 Blog Post
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
-          p
-            a.btn.btn-success(href='http://www.tutorialrepublic.com/twitter-bootstrap-tutorial/', target='_blank') Learn More »
+        .row
+          .col-sm-12.col-lg-10.col-lg-push-1
+            .step
+              .row
+                .row__parallel-sm.row__parallel-md.row__parallel-lg
+                  .col-sm-5.col-sm-push-7.col-md-4.col-md-push-8
+                    .step__icon
+                      i.icon.icon--lg.icon--step-payment
+                  .col-sm-7.col-sm-pull-5.col-md-8.col-md-pull-4
+                    h2.step__heading Safe & Simple 
+                    p.step__caption.h5
+                      | Your little ones will also learn new vocabulary words and can record themselves reading the books when they’ve finished! iPad, iPhone, iPod Touch, Android; free with first e-book.!
 
-      .section-three  
-        .col-md-6
-          h2 Top 10 Apps
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
-          p
-            a.btn.btn-success(href='http://www.tutorialrepublic.com/html-tutorial/', target='_blank') Learn More »
-        .col-md-6
-          h2  Featured Apps
-          p
-            | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam scelerisque purus quis ante congue, sit amet venenatis sem consectetur. Praesent nec odio eros. Sed commodo quam non pharetra ultricies. Nullam id tellus semper dui sollicitudin port.
-          p
-            a.btn.btn-success(href='http://www.tutorialrepublic.com/css-tutorial/', target='_blank') Learn More »
 
               
     

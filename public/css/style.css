@@ -23,43 +23,61 @@ html, body{
 
 
 /*==============================================First section*/
-.content-top{
-	margin:0 auto;
-	width:100%;
-	min-height: 600px;
-	position: relative;
-	padding: 0;
-	overflow: hidden;
-	background-image:url("../img/legoPic.jpg") ;
+
+#ff-home-leader {
+    background-image: url("https://neteducatio.hu/wp-content/uploads/2016/06/mom-and-kids-img.jpg");
 	background-size:cover;
 	background-position:center center;
 	background-attachment:fixed;
-}
-
-.intro{
-	text-align: center;
-	margin: 0 0 90px;
 	color: black;
-	
-}
-.intro-home{
-	padding-top: 250px;
 }
 
-.intro__heading.h1.hidden-xs{
-	font-size: 60px;
-}
-.intro__subheading{
-	font-size: 30px;
+@media (min-width: 601px){
+.ff-fullheight {
+    width: 100%;
+    display: table;
+    background-size: cover;
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    max-height: 80vw;
+    min-height: 400px;
+	}
 }
 
-.article{
-	margin:0 auto;
-	width:100%;
-	height: 100%;
-	position: relative;
-	text-align: center;
+@media (min-width: 601px){
+.ff-fullheight.ff-fullheight-vertical-middle {
+	vertical-align: middle;
+	display: table-cell;
+	}
 }
+
+.ff-fullheight-vertical-middle{
+	padding-bottom: 20px;
+
+}
+
+.ff-fullheight-text.right{
+	margin-top: 250px;
+}
+
+.btn-patio {
+    color: #fff;
+    border-color: #f8df7f;
+    border-bottom-color: #f29f33;
+    border-width: 2px;
+	background: linear-gradient(to bottom, #f6cd54 0%,#ef9324 100%);
+}
+
+
+
+
+
+
+
+
+
+
+
 /*=====================================sliderOp*/
 
 
@@ -67,7 +85,7 @@ html, body{
 	background-image: url();
 	background-color: grey;
 	background-repeat: no-repeat;
-	height: 400px;
+	height: 300px;
 }
 
 
@@ -106,33 +124,92 @@ html, body{
 
 
 
-/*==============================================Second Section */
-
-.row.section-info{
-	text-align: center;
+/*==============================================-----------Second Section  Not gonna use  */
+.section--steps {
 	padding: 50px 0 0;
-    background-color: #F9F9F9;
+	background-color: #F9F9F9;
+	background-image: url("../img/");
 }
-.row.section-info h2{
-	font-size:3em;
-	line-height: 4rem;
-	color: #3498DB;
-}
-
-.section-one{
-	margin-top: 20px;
-	min-height: 300px;
+.section{
+	position: relative;
+	overflow-x: hidden;
 
 }
 
-.section-two	{
-	min-height: 300px;
-
+@media(min-width:768px){
+	.cont-top{
+		width: 900px;
+	}
 }
-.section-three{
-	min-height: 300px;
 
+@media(min-width:768px){
+	.col-sm-12{
+		float: left;
+	}
 }
+
+@media(min-width:768px){
+	.step{
+		text-align:left;
+	}
+}
+
+.step{
+	margin: 0 0 50px;
+}
+
+@media(min-width:768px){
+	.step__icon{
+		margin: 0 auto;
+	}
+}
+
+.step__icon {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    margin: 0 auto 20px;
+    background-color: #FFCC66;
+    border-radius: 50%;
+}
+
+.step__icon.icon{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.icon--step-bond-guarantee{
+	background-image: url("");
+	background-repeat: no-repeat;
+}
+
+.icon-lg{
+	width: 175px;
+	height: 175px;
+}
+
+.icon{
+	display: inline-block;
+	background-size: contain;
+	vertical-align: middle;
+	font: 0/0 a;
+	color: transparent;
+	text-shadow:none;
+	background-color: transparent;
+	border: 0;
+}
+
+@media screen and (min-width: 768px){
+	.step__caption{
+		line-height: 2.57143rem;
+	}
+}
+
+
+
+
 
 /*=====================================Background text*/
 
@@ -312,33 +389,193 @@ img{
 
 /*=================================================================article page*/
 
+.app__page{
+	position:relative;
+	min-height: 60vh;
+}
+
+@media (min-width: 600px){
+	.app__topPad{
+		margin-top: 60px;
+	}
+}
+
+.app__bottomPad{
+	margin-bottom: 60px;
+}
+
+.grid {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+    padding: 0 20px;
+    width: 100%;
+}
+.pageHeading__subtitle{
+	margin: 0;
+}
+
+@media (min-width:800px){
+	.paddingHeading__title{
+		font-size: 36px;
+	}
+}
+
+@media (min-width: 800px){
+	.blogLayout{
+		display: flex;
+		-webkit-box-orient: horizontal;
+    	-webkit-box-direction: normal;
+		flex-direction: row;
+	}
+}
+
+@media (min-width: 800px){
+	.blogLayout__mainPane{
+		-webkit-box-flex: 1;
+		flex: 1 1 0%;
+	}
+}
+
+@media (min-width: 800px){
+	.blogLayout__sidePane{
+		margin: 0 0 0 15px;
+		width: 363px;
+	}
+}
+
+.blogPostPreview{
+	border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 10px; /*=============need to edit*/
+    color: inherit;
+    box-sizing: content-box;
+    max-width: 700px;
+    margin-bottom: 15px;/*=============need to edit*/
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+	background:#aaccef;
+}
+
+.blog__mainImage {
+	margin: 0;
+}
+.blog__mainImageImg{
+	width: 100%;
+	margin-bottom: 12px;
+}
+img{
+	border-style: none;
+}
+
+a{
+	background-color: transparent;
+}
+
+.blogPostPreview.paddingHeading__title{
+	margin-bottom: 0;
+}
+
+.pageHeading__title, .pageHeading__title a {
+    color: #531294;
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 0;
+}
+.pageHeading__subtitle, .pageHeading__subtitle a {
+    color: #08a467;
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.blog__content {
+    color: #4a4a4a;
+    /*font-family: Georgia,Times New Roman,serif;*/
+    font-size: 18px;
+    line-height: 1.66;
+}
 
 
+/*==================sidepane*/
+.blogLayout__sidePaneBox{
+	border: 5px solid #aaccef;
+	border-radius: 4px;
+	padding: 10px;
+	margin-bottom: 20px;
+	background:#dce1e8;
+}
 
+.blogLayout__sidePaneHeading {
+	font-size: 24px;
+	text-align: center;
+}
 
+.blogLayout__description{
+	text-align: center;
+}
 
+.blogLayout__sidePaneSubheading {
+    color: #531294;
+    margin-top: 0;
+}
 
+.blogLayout__categories {
+    padding: 0;
+}
 
+.blogLayout__category {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
 
+.blogLayout__sidePane--grey {
+	background: #efefef;
+	text-align: center;
+}
+.blogLayout__sidePaneBox {
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.blogLayout__connect {
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
 
+.socialIcons{
+	margin-left: -6px;
+	margin-top: -6px;
+}
 
+.socialIcons__socialIcon {
+    display: inline-block;
+    padding: 4px;
+    height: 36px;
+    box-sizing: content-box;
+    outline: none;
+}
 
+.blogLayout__sidePaneCtaLogo{
+	margin: 14px 0 10px;
+}
 
+.blogLayout__sidePaneCtaImg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.blogLayout__sidePaneCtaHeading {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 18px;
+}
 
 
 
@@ -560,3 +797,41 @@ img{
 a{
 	text-decoration: none;
 }*/
+
+
+/*.content-top{
+	margin:0 auto;
+	width:100%;
+	min-height: 600px;
+	position: relative;
+	padding: 0;
+	overflow: hidden;
+	background-image:url("../img/legoPic.jpg") ;
+	background-size:cover;
+	background-position:center center;
+	background-attachment:fixed;
+}
+
+.intro{
+	text-align: center;
+	margin: 0 0 90px;
+	color: black;
+	
+}
+.intro-home{
+	padding-top: 250px;
+}
+
+.intro__heading.h1.hidden-xs{
+	font-size: 60px;
+}
+.intro__subheading{
+	font-size: 30px;
+}
+
+.article{
+	margin:0 auto;
+	width:100%;
+	height: 100%;
+	position: relative;
+	text-align: center;*/
