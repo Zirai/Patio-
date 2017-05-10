@@ -20,6 +20,11 @@ html, body{
 	text-decoration: none;	
 }
 
+#logo{
+	width: 130px;
+	margin-top: -30px;
+
+}
 
 
 /*==============================================First section*/
@@ -246,7 +251,7 @@ figure{
 
 
 
-/*===================================================Footer*/
+/*==================================================================Footer*/
 .users.footer
 {
 	padding: 20px;
@@ -385,6 +390,12 @@ img{
 	border: 0;
 }
 
+.intro-apps{
+	text-align: center;
+	width:100%;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
 
 
 /*=================================================================article page*/
@@ -576,6 +587,80 @@ a{
     margin-bottom: 0;
     margin-top: 18px;
 }
+
+
+
+
+
+/*=============================================================================Login Page*/
+#push-before{
+	padding-top: 70px;
+	padding-bottom: 200px;
+	background: #eee !important;	
+	
+}
+
+.container.ff-neue-form{
+	max-width: 320px;
+}
+
+.ff-neue-form {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+
+.wrapper {	
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+
+.form-signin {
+  max-width: 380px;
+  padding: 15px 35px 45px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.1);  
+}
+
+.form-signin-heading.checkbox {
+	margin-bottom: 30px;
+}
+
+.checkbox {
+	font-weight: normal;
+}
+
+.form-control {
+	position: relative;
+	font-size: 16px;
+	height: auto;
+	padding: 10px;
+}
+
+
+input[type="text"] {
+	margin-bottom: -1px;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+input[type="password"] {
+	margin-bottom: 20px;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+
+#devise_shared_links{
+	text-align: center;
+}
+
+.btn-lg{
+	background: linear-gradient(to bottom, #f6cd54 0%,#ef9324 100%);
+}
+
+
+
 
 
 

@@ -6,12 +6,12 @@ PatioWeb.config(function($routeProvider) {
     templateUrl: 'views/index.jade',
     controllerAs: 'vm'
   })
-  .when('/article', {
+  .when('/Article', {
     controller:'ArticleController',
     templateUrl: 'views/article.jade',
     controllerAs: 'vm'
   })
-  .when('/apps', {
+  .when('/Apps', {
     controller:'AppsController',
     templateUrl: 'views/apps.jade',
     controllerAs: 'vm'

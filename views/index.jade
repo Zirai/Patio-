@@ -14,7 +14,8 @@ html(ng-app='PatioWeb')
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href='index') PatioWeb
+            a.navbar-brand(href='index')
+              img#logo(alt='Logo', src='../img/Patio.png')
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
               li
@@ -25,9 +26,9 @@ html(ng-app='PatioWeb')
                 a(href='article') Article
             ul.nav.navbar-nav.navbar-right
               li
-                a.signup-link(data-toggle='modal', data-target='#signup', href='#') Login
+                a.signup-link( data-target='#login', href='login') Login
               li
-                a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
+                a.signup-link( data-target='#signup', href='signup') Sign Up
 
     #ff-home-leader.ff-fullheight(style='height: 785px;')
       .ff-fullheight-vertical.middle
@@ -165,6 +166,5 @@ html(ng-app='PatioWeb')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js')
   script(src='/js/bootstrap.js')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js') 
-  //script(src='views/main.js')
   script(src='/javascripts/home.client.controller.js')
   script(src='/javascripts/main.js')
