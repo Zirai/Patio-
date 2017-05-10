@@ -49,6 +49,14 @@ app.get('/article', function(req, res) {
 	res.render('article');
 });
 
+app.get('/login', function(req, res) {
+    res.render('login');
+});
+
+app.get('/signup', function(req, res) {
+    res.render('signup');
+});
+
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
