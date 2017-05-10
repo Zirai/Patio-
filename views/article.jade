@@ -4,6 +4,8 @@ html(ng-app='PatioWeb')
     title Welcome to Patio!
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
   body
     nav.navbar.navbar-default.navbar-fixed-top
       .navbar-inner
@@ -27,6 +29,94 @@ html(ng-app='PatioWeb')
                 a.signup-link(data-toggle='modal', data-target='#signup', href='#') Login
               li
                 a.signup-link(data-toggle='modal', data-target='#signup', href='#') Sign Up
+
+
+    main.blogIndex.app__topPad
+      .grid.app__bottomPad
+        .pageHeading
+          h2.pageHeading__subtitle PatioWeb World
+          h1.pageHeading__title Latest Articles
+        .blogLayout
+          .blogLayout__mainPane
+            .blogPostPreview.blog__container
+              figure.blog__mainImage
+                img.image.blog__mainImageImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=700', srcset='https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=700 1x, https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=1400 2x', width='700', alt='Little girl planting seeds in pots')
+              .pageHeading
+                h2.pageHeading__subtitle
+                  | Family Activities
+                h1.pageHeading__title
+                  | How to Turn Your Family Garden into a Learning Adventure
+              .blog__content
+                p
+                  | It looks like spring
+                  |  has finally arrived. In some areas of the country, we thought it would never get here. Is your green thumb starting to itch? Whether you create a small…
+            .blogPostPreview.blog__container
+              figure.blog__mainImage
+                img.image.blog__mainImageImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/6ahWEF1gaWiAa2qCe2mI2E/7a4bcca48a5c160afb8f9e7413545d0d/4-14-17_STEAM_Lit.jpg?fl=progressive&fm=jpg&q=80&w=700', srcset='https://www.curiousworld.com/assets/lkg5uoo2te2j/6ahWEF1gaWiAa2qCe2mI2E/7a4bcca48a5c160afb8f9e7413545d0d/4-14-17_STEAM_Lit.jpg?fl=progressive&fm=jpg&q=80&w=700 1x, https://www.curiousworld.com/assets/lkg5uoo2te2j/6ahWEF1gaWiAa2qCe2mI2E/7a4bcca48a5c160afb8f9e7413545d0d/4-14-17_STEAM_Lit.jpg?fl=progressive&fm=jpg&q=80&w=1400 2x', width='700', alt='Selection of STEAM picture books')
+              .pageHeading
+                h2.pageHeading__subtitle
+                  | Top Book Picks
+                h1.pageHeading__title
+                  | 10 Books That Combine STEAM Learning with Storytime
+              .blog__content
+                p
+                  | Over the past several years, social media, education blogs, and state education policies have been increasingly discussing STEM
+            .blogPostPreview.blog__container
+              figure.blog__mainImage
+                img.image.blog__mainImageImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=700', srcset='https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=700 1x, https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=1400 2x', width='700', alt='Little girl planting seeds in pots')
+              .pageHeading
+                h2.pageHeading__subtitle
+                  | Family Activities
+                h1.pageHeading__title
+                  | How to Turn Your Family Garden into a Learning Adventure
+              .blog__content
+                p
+                  | It looks like spring
+                  |  has finally arrived. In some areas of the country, we thought it would never get here. Is your green thumb starting to itch? Whether you create a small…
+          .blogLayout__sidePane
+            .blogLayout__sidePaneBox
+              h1.blogLayout__sidePaneHeading
+                a(href='/blog', style='text-decoration:none;')
+                  span.blogLayout__sidePaneHeading1 PatioWeb
+              p.blogLayout__description Get advice and inspiration for how to spark a love of learning in our kids!
+              hr
+              h2.blogLayout__sidePaneSubheading Select a topic
+              ul.blogLayout__categories
+                li.blogLayout__category
+                  a(href='/blog/category/family-activities', style='text-decoration:none;') Family Activities
+                li.blogLayout__category
+                  a(href='/blog/category/parenting-tips', style='text-decoration:none;') Parenting Tips
+                li.blogLayout__category
+                  a(href='/blog/category/top-book-picks', style='text-decoration:none;') Top Article Picks
+            .blogLayout__sidePaneBox.blogLayout__sidePaneBox--grey
+              p.blogLayout__connect Connect with us
+              .socialIcons
+                a.ext-link.socialIcons__socialIcon(target='_blank', rel='noopener noreferrer', href='')
+                  img(src='../img/fb.png', alt='Facebook', width='36', height='36')
+                a.ext-link.socialIcons__socialIcon(target='_blank', rel='noopener noreferrer', href='')
+                  img(src='../img/ig.png', alt='Instagram', width='36', height='36')
+                a.ext-link.socialIcons__socialIcon(target='_blank', rel='noopener noreferrer', href='')
+                  img(src='../img/pin.png', alt='Pinterest', width='36', height='36')
+                a.ext-link.socialIcons__socialIcon(target='_blank', rel='noopener noreferrer', href='')
+                  img(src='../img/twt.png', alt='Twitter', width='36', height='36')
+                a.ext-link.socialIcons__socialIcon(target='_blank', rel='noopener noreferrer', href='')
+                  img(src='../img/utube.png', alt='Youtube', width='36', height='36')
+            a.blogLayout__sidePaneCta(href='/subscribe/register' style='text-decoration:none;')
+              .blogLayout__sidePaneBox.blogLayout__sidePaneBox--grey
+                img.image.blogLayout__sidePaneCtaImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=189&w=333', srcset='https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=189&w=333 1x, https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=378&w=666 2x', width='333', height='189', alt='Try the Curious World app for iPhone & iPad.')
+                h3.blogLayout__sidePaneCtaHeading Learn to Patio
+                p
+                  | #1 early learning app featuring educational games, videos, and books for kids ages 2–7.
+
+
+
+
+
+
+
+
+
+
 
 
               
