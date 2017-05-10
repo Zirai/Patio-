@@ -7,7 +7,7 @@ var appSchema = new mongoose.Schema({
         unique : true
     },
     image : {
-	url : String
+        type : String
     },
     createdOn : {
         type : Date,
