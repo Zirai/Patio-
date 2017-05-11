@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var userSchema = new mongoose.Schema({
+var userSchema = new Schema({
     username : {
         type : String,
         required : true,
@@ -12,4 +13,6 @@ var userSchema = new mongoose.Schema({
     }
 });
 
-mongoose.model('User', userSchema, 'user');
+// mongoose.model('User', userSchema, 'user');
+
+mongoose.model('User', userSchema)

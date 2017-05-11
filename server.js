@@ -3,6 +3,7 @@ require('./api/data/db.js');
 var express = require('express');
 var app = express();
 var path = require('path');
+var bodyParser = require('body-parser');
 
 // include routing for page
 var routes = require('./routing');
@@ -32,6 +33,12 @@ app.use(function(req, res, next) {
 	console.log(req.method, req.url);
 	next();
 });
+
+// use body-parser
+app.use(bodyParser.urlencoded({
+    extended: true
+  }));
+app.use(bodyParser.json());
 
 // use routing for page
 app.use('/', routes);

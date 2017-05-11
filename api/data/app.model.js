@@ -15,4 +15,6 @@ var appSchema = new mongoose.Schema({
     }
 });
 
-mongoose.model('App', appSchema, 'app');
+// mongoose.model('App', appSchema, 'app');
+
+module.exports = mongoose.model('App', appSchema)

@@ -21,6 +21,7 @@
     "@angular/router": "~3.4.0",
     "@angular/upgrade": "~2.4.0",
     "angular-in-memory-web-api": "~0.2.4",
+    "body-parser": "*",
     "core-js": "^2.4.1",
     "express": "~4.9.8",
     "jade": "~1.11.0",
