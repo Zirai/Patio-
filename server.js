@@ -3,9 +3,15 @@ require('./api/data/db.js');
 var express = require('express');
 var app = express();
 var path = require('path');
+var mongoose = require('mongoose');
+var passport = require('passport');
+var LocalStrategy = require('passport-local').Strategy;
 
 // include the routing for api 
 var apiRoute = require('./api/apiRoute');
+
+// proper routing  here
+var routes = require('./routing');
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -25,18 +31,31 @@ app.use("/javascripts", express.static("./public/js"));
 app.set('views', __dirname + '/views');
 
 // add middleware to console log every request
+/*
 app.use(function(req, res, next) {
 	console.log(req.method, req.url);
 	next();
 });
+*/
 
-// routing for API 
+// passport config
+var User = require('./api/data/user.model');
+passport.use(new LocalStrategy(User.authenticate()));
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
+
+// general page routing
+app.use('/', routes);
+
+// routing for API
 app.use('/api', apiRoute);
 
-// set the home page route
+// BELOW ARE PAGE ROUTINGS
+/*
 app.get('/', function(req, res) {
 	res.render('index');
 });
+
 app.get('/index', function(req, res) {
 	res.render('index');
 });
@@ -56,8 +75,7 @@ app.get('/login', function(req, res) {
 app.get('/signup', function(req, res) {
     res.render('signup');
 });
-
+*/
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
-

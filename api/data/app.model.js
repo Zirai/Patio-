@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
 
-var appSchema = new mongoose.Schema({
+var appSchema = new Schema({
     appName : {
         type : String,
         required : true,
@@ -15,4 +16,4 @@ var appSchema = new mongoose.Schema({
     }
 });
 
-mongoose.model('App', appSchema, 'app');
+module.exports = mongoose.model('App', appSchema);

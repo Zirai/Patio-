@@ -1,6 +1,8 @@
 var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var passportLocalMongoose = require('passport-local-mongoose');
 
-var articleSchema = new mongoose.Schema({
+var articleSchema = new Schema({
     articleName : {
         type : String,
         required : true,
@@ -16,4 +18,4 @@ var articleSchema = new mongoose.Schema({
     }
 });
 
-mongoose.model('Article', articleSchema, 'article');
+module.exports = mongoose.model('Article', articleSchema);
