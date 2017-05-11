@@ -3,7 +3,8 @@ var User = require('../api/data/user.model');
 var router = express.Router();
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
-//var User = require('../api/data/user.model');
+var Subscriber = require('../api/data/subscriber.model');
+var Subscriber = mongoose.model('Subscriber');
 
 router.get('/', function(req, res) {
     res.render('index');
@@ -21,7 +22,7 @@ router.get('/article', function(req, res) {
     res.render('article');
 });
 
-router.get('/login', function(req, res) {
+router.get('/loginPage', function(req, res) {
     res.render('login');
 });
 
@@ -52,7 +53,27 @@ router.post('/login', function(req, res) {
 		}); 
 });
 
-router.get('/signup', function(req, res) {
+router.get('/subscribePage', function(req, res) {
+	res.render('subscribe');
+});
+
+router.post('/subscribe', function(req, res) {
+	var username = req.body.username;
+    var appName = req.body.appName;
+	if(!req.body.username || !req.body.appName || !req.body) 
+	{
+		return res.json("You left out some field blank! Please fill in the field!");
+	}
+	Subscriber.create(req.body)
+		.then(function(subs){
+			return res.json("Successfully subscribed!");
+		})
+		.catch(function(err){
+			return res.json(err);
+		}); 
+});
+
+router.get('/signupPage', function(req, res) {
    res.render('signup');
 });
 

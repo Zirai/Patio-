@@ -11,9 +11,6 @@ var routes = require('./routing');
 // include the routing for api 
 var apiRoute = require('./api/apiRoute');
 
-// proper routing  here
-var routes = require('./routing');
-
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
 
