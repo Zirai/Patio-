@@ -26,9 +26,9 @@ html(ng-app='PatioWeb')
                 a(href='article') Article
             ul.nav.navbar-nav.navbar-right
               li
-                a.signup-link( data-target='#login', href='login') Login
+                a.signup-link( data-target='#login', href='loginPage') Login
               li
-                a.signup-link( data-target='#signup', href='signup') Sign Up
+                a.signup-link( data-target='#signup', href='signupPage') Sign Up
 
     #ff-home-leader.ff-fullheight(style='height: 785px;')
       .ff-fullheight-vertical.middle
@@ -46,7 +46,6 @@ html(ng-app='PatioWeb')
             p
               a.btn.btn-default.btn-patio.btn-lg(href='#downloadModal', data-toggle='modal', role='button')
                 | Get the App 
-                span.glyphicon.glyphicon-play
 
     #ff-home-testimonials.ff-testimonial-carousel.bear-background.ff-blue-module.carousel.slide(data-ride='carousel', data-pause='false', data-interval='4000')
       // Indicators
@@ -61,7 +60,7 @@ html(ng-app='PatioWeb')
             .ff-vertical.middle
               .quote “Brain Expander.”
               .source
-                img(alt='', src='')
+                img(alt='', src='../img/ball.png')
         .item
           .ff-vertical-container
             .ff-vertical.middle
@@ -70,13 +69,15 @@ html(ng-app='PatioWeb')
                 span.small If my children only had one app 
                 span THIS would be it.
                 | ”
-              .source — Mom of three
+              .source
+                img(alt='', src='../img/candy.png')
+
         .item.active
           .ff-vertical-container
             .ff-vertical.middle
               .quote “A Solid Literacy Tool.”
               .source
-                img(alt='', src='')
+                img(alt='', src='../img/radio.png')
         .item
           .ff-vertical-container
             .ff-vertical.middle
@@ -86,7 +87,7 @@ html(ng-app='PatioWeb')
                 span but in its execution.
                 | ”
               .source
-                img(alt='', src='')
+                img(alt='', src='../img/hb.png')
 
     section#how-it-works.section.section--steps
       .container.cont-top
@@ -101,7 +102,7 @@ html(ng-app='PatioWeb')
                   .col-sm-7.col-sm-pull-5.col-md-8.col-md-pull-4
                     h2.step__heading Kids Education
                     p.step__caption.h5
-                      | Free play and guided play—together known as playful learning—are pedagogical tools through which children can learn in joyful and conceptually rich ways
+                      | Free play and guided play—together known as playful learning—are pedagogical tools through which children can learn in joyful and conceptually rich ways. More than 300 stories in this app’s library for an interactive read-along experience with your child. Record video of storytime so that your little one can watch it again in the morning, while paging through and following along!
   
         .row
           .col-sm-12.col-lg-10.col-lg-push-1
@@ -109,12 +110,12 @@ html(ng-app='PatioWeb')
               .row
                 .row__parallel-sm.row__parallel-md.row__parallel-lg
                   .col-sm-5.col-md-4
-                    .step__icon
+                    .step__icon2
                       i.icon.icon--lg.icon--step-quote
                   .col-sm-7.col-md-8
                     h2.step__heading Parenting
                     p.step__caption.h5
-                      | Guided play helps children learn to solve problems, persist through challenges, build vocabulary skills, and gain background knowledge in many content areas
+                      | Guided play helps children learn to solve problems, persist through challenges, build vocabulary skills, and gain background knowledge in many content areas. Give young kids a chance to find their own solutions. When you lovingly acknowledge a child's minor frustrations without immediately rushing in to save her, you teach her self-reliance and resilience
 
         .row
           .col-sm-12.col-lg-10.col-lg-push-1
@@ -122,12 +123,12 @@ html(ng-app='PatioWeb')
               .row
                 .row__parallel-sm.row__parallel-md.row__parallel-lg
                   .col-sm-5.col-sm-push-7.col-md-4.col-md-push-8
-                    .step__icon
+                    .step__icon3
                       i.icon.icon--lg.icon--step-payment
                   .col-sm-7.col-sm-pull-5.col-md-8.col-md-pull-4
                     h2.step__heading Safe & Simple 
                     p.step__caption.h5
-                      | Your little ones will also learn new vocabulary words and can record themselves reading the books when they’ve finished! iPad, iPhone, iPod Touch, Android; free with first e-book.!
+                      | Young readers can find new literary faves with helpful narration from kids their age. Your little ones will also learn new vocabulary words and can record themselves reading the books when they’ve finished! iPad, iPhone, iPod Touch, Android; free with first e-book.
 
 
               

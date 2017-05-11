@@ -14,7 +14,8 @@ html(ng-app='PatioWeb')
               span.icon-bar
               span.icon-bar
               span.icon-bar
-            a.navbar-brand(href='index') PatioWeb
+            a.navbar-brand(href='index')
+              img#logo(alt='Logo', src='../img/Patio.png')
           #bs-example-navbar-collapse-1.collapse.navbar-collapse
             ul.nav.navbar-nav
               li
@@ -25,9 +26,9 @@ html(ng-app='PatioWeb')
                 a(href='article') Article
             ul.nav.navbar-nav.navbar-right
               li
-                a.signup-link(data-target='#login', href='login') Login
+                a.signup-link(data-target='#login', href='loginPage') Login
               li
-                a.signup-link(data-target='#signup', href='signup') Sign Up
+                a.signup-link(data-target='#signup', href='signupPage') Sign Up
 
     #push-before
         .container.ff-neue-form.narrow
@@ -39,12 +40,12 @@ html(ng-app='PatioWeb')
                 label.checkbox
                 input#rememberMe(type='checkbox', value='remember-me', name='rememberMe')
                 |  Remember me
-                button.btn.btn-lg.btn-primary.btn-block(type='submit') Login
+                button.btn.btn-lg.btn-primary.btn-block(type='loginPage') Login
 
         #devise_shared_links(style='margin-top: 10px; margin-bottom: 10px;')
-            a(href='signup') Register
+            a(href='signupPage') Register
             |   |
-            a(href='/users/password/new') Forgot your password?
+            a(href='') Forgot your password?
             br
 
 
