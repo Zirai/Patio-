@@ -13,6 +13,9 @@ var appSchema = new Schema({
     createdOn : {
         type : Date,
         "default" : Date.now
+    },
+    link : {
+        type : String
     }
 });
 
