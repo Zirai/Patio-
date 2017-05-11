@@ -27,9 +27,9 @@ router.get('/loginPage', function(req, res) {
 });
 
 router.post('/login', function(req, res) {
-	if(!req.body.username || !req.body.password || !req.body)
+	if(!req.body.username || !req.body.password || !req.body || req.body === null || req.body.password === null || req.body.username === null)
 	{
-		res.send("You left out some field blank! Please fill in the field!");
+		return res.send("You left out some field blank! Please fill in the field!");
 	}
 	
 	var find = User.findOne(req.body).exec();
@@ -60,7 +60,7 @@ router.get('/subscribePage', function(req, res) {
 router.post('/subscribe', function(req, res) {
 	var username = req.body.username;
     var appName = req.body.appName;
-	if(!req.body.username || !req.body.appName || !req.body) 
+	if(!req.body.username || !req.body.appName || !req.body || req.body === null || req.body.username === null || req.body.appName === null) 
 	{
 		return res.json("You left out some field blank! Please fill in the field!");
 	}
@@ -80,7 +80,7 @@ router.get('/signupPage', function(req, res) {
 router.post('/signup', function(req, res) {
     var username = req.body.username;
     var password = req.body.password;
-	if(!req.body.username || !req.body.password || !req.body) 
+	if(!req.body.username || !req.body.password || !req.body || req.body === null || req.body.password === null || req.body.username === null)
 	{
 		return res.json("You left out some field blank! Please fill in the field!");
 	}
