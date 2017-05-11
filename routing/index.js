@@ -73,6 +73,22 @@ router.post('/subscribe', function(req, res) {
 		}); 
 });
 
+router.post('/unsubscribe', function(req, res) {
+	var username = req.body.username;
+    var appName = req.body.appName;
+	if(!req.body.username || !req.body.appName || !req.body || req.body === null || req.body.username === null || req.body.appName === null) 
+	{
+		return res.json("You left out some field blank! Please fill in the field!");
+	}
+	Subscriber.remove(req.body)
+		.then(function(subs){
+			return res.json("Successfully unsubscribed!");
+		})
+		.catch(function(err){
+			return res.json(err);
+		}); 
+});
+
 router.get('/signupPage', function(req, res) {
    res.render('signup');
 });

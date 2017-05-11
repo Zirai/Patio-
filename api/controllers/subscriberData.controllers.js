@@ -1,6 +1,7 @@
 var db = require('../data/db.js');
 var mongoose = require('mongoose');
 var Subscriber = mongoose.model('Subscriber');
+var App = mongoose.model('App');
 
 /*
 module.exports.subscriberDataGetAll = function(req, res) {
@@ -20,11 +21,21 @@ module.exports.subscriberDataGetOne = function(req, res) {
 	
 	Subscriber
 		.find({'username': username})
-		.exec(function(err, doc) {
-			res
-				.status(200)
-				.json(doc);
-		});
+		.then(function(subscriptions){
+			var arr = [];
+			for(var a = 0; a < subscriptions.length; a ++){
+				console.log(a);
+				arr.push(subscriptions[a].appName);
+			}
+			App
+				.find({ 'appName': { $in :arr } })
+				.then(function(app){
+					res.send(app);
+				})
+		})
+		.catch(function(err){
+			res.send(err);
+		})
 };
 
 module.exports.subscriberDataAddOne = function(req, res) {
