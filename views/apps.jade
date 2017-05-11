@@ -7,26 +7,23 @@ html(ng-app='PatioWeb')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
     script.
       //var PatioWeb = angular.module('PatioWeb', ['ngRoute']);
-      PatioWeb.config(function($routeProvider) {
-        $routeProvider.when('/home', {
-          controller:'homeController',
-          templateUrl: 'views/index.jade',
-          controllerAs: 'vm'
-        })
-        .when('/articleData', {
-          controller:'ArticleController',
-          templateUrl: 'views/article.jade',
-          controllerAs: 'vm'
-        })
-        .when('/appData', {
-          controller:'AppsController',
-          templateUrl: 'views/apps.jade',
-          controllerAs: 'vm'
-        })
-        .otherwise({
-          redirectTo: '/'
-        })
-      });
+      //- PatioWeb.config(function($routeProvider) {
+      //-   $routeProvider.when('/home', {
+      //-     controller:'homeController',
+      //-     templateUrl: 'views/index.jade',
+      //-   })
+      //-   .when('/articleData', {
+      //-     controller:'ArticleController',
+      //-     templateUrl: 'views/article.jade',
+      //-   })
+      //-   .when('/appData', {
+      //-     controller:'AppsController',
+      //-     templateUrl: 'views/apps.jade',
+      //-   })
+      //-   .otherwise({
+      //-     redirectTo: '/'
+      //-   })
+      //- });
 
   body
     nav.navbar.navbar-default.navbar-fixed-top
@@ -73,6 +70,7 @@ html(ng-app='PatioWeb')
           .ff-appcover
             a(href='')
               img.thumb(alt='Luke and Lexi Ladybug', src='https://cdn.farfaria.com/uploads/story/cover_art/5006f2a25cb6950002000008/small_320_luke_and_lexi_1_9614.jpg')
+
 
     #ff-home-testimonials.ff-testimonial-carousel.bear-background.ff-blue-module.carousel.slide(data-ride='carousel', data-pause='false', data-interval='4000')
       // Indicators
@@ -127,7 +125,7 @@ html(ng-app='PatioWeb')
     #products.row.list-group
       .item.col-xs-4.col-lg-4
         .thumbnail
-          img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
+          img.group.list-group-image(src='../img/bitmap1.png', alt='')
           .caption
             h4.group.inner.list-group-item-heading
               | {{appData.id}}
@@ -139,10 +137,10 @@ html(ng-app='PatioWeb')
                 p.lead
                   | $21.000
               .col-xs-12.col-md-6
-                a.btn.btn-success(href='http://www.jquery2dotnet.com') Add to cart
+                a.btn.btn-success(href='', ng-click="toogle1 = !toogle1") {{toogle1 && 'unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
-          img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
+          img.group.list-group-image(src='', alt='')
           .caption
             h4.group.inner.list-group-item-heading
               | Product title
@@ -154,10 +152,10 @@ html(ng-app='PatioWeb')
                 p.lead
                   | $21.000
               .col-xs-12.col-md-6
-                a.btn.btn-success(href='http://www.jquery2dotnet.com') Add to cart
+                a.btn.btn-success(href='', ng-click="toogle2 = !toogle2") {{toogle2 && 'Unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
-          img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
+          img.group.list-group-image(src='', alt='')
           .caption
             h4.group.inner.list-group-item-heading
               | Product title
@@ -169,10 +167,10 @@ html(ng-app='PatioWeb')
                 p.lead
                   | $21.000
               .col-xs-12.col-md-6
-                a.btn.btn-success(href='http://www.jquery2dotnet.com') Add to cart
+                a.btn.btn-success(href='', ng-click="toogle3 = !toogle3") {{toogle3 && 'Unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
-          img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
+          img.group.list-group-image(src='', alt='')
           .caption
             h4.group.inner.list-group-item-heading
               | Product title
@@ -184,10 +182,10 @@ html(ng-app='PatioWeb')
                 p.lead
                   | $21.000
               .col-xs-12.col-md-6
-                a.btn.btn-success(href='http://www.jquery2dotnet.com') Add to cart
+                a.btn.btn-success(href='', ng-click="toogle4 = !toogle4") {{toogle4 && 'Unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
-          img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
+          img.group.list-group-image(src='', alt='')
           .caption
             h4.group.inner.list-group-item-heading
               | Product title
@@ -199,10 +197,10 @@ html(ng-app='PatioWeb')
                 p.lead
                   | $21.000
               .col-xs-12.col-md-6
-                a.btn.btn-success(href='http://www.jquery2dotnet.com') Add to cart
+                a.btn.btn-success(href='', ng-click="toogle5 = !toogle5") {{toogle5 && 'Unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
-          img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
+          img.group.list-group-image(src='', alt='')
           .caption
             h4.group.inner.list-group-item-heading
               | Product title
@@ -214,7 +212,7 @@ html(ng-app='PatioWeb')
                 p.lead
                   | $21.000
               .col-xs-12.col-md-6
-                a.btn.btn-success(href='http://www.jquery2dotnet.com') Add to cart
+                a.btn.btn-success(href='', ng-click="toogle = !toogle") {{toogle && 'Unsubscribe' || 'Subscribe'}}
                     
     
     .users.footer
@@ -251,4 +249,6 @@ html(ng-app='PatioWeb')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js') 
   script(src='/javascripts/App.controller.js')
   script(src='/javascripts/main.js')
+  script.
+
 
