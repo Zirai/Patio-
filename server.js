@@ -4,6 +4,9 @@ var express = require('express');
 var app = express();
 var path = require('path');
 
+// include routing for page
+var routes = require('./routing');
+
 // include the routing for api 
 var apiRoute = require('./api/apiRoute');
 
@@ -30,9 +33,13 @@ app.use(function(req, res, next) {
 	next();
 });
 
+// use routing for page
+app.use('/', routes);
+
 // routing for API 
 app.use('/api', apiRoute);
 
+/*
 // set the home page route
 app.get('/', function(req, res) {
 	res.render('index');
@@ -56,6 +63,7 @@ app.get('/login', function(req, res) {
 app.get('/signup', function(req, res) {
     res.render('signup');
 });
+*/
 
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
