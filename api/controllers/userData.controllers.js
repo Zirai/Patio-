@@ -2,6 +2,7 @@ var db = require('../data/db.js');
 var mongoose = require('mongoose');
 var User = mongoose.model('User');
 
+/*
 module.exports.userDataGetAll = function(req, res) {
     User
         .find()
@@ -11,6 +12,7 @@ module.exports.userDataGetAll = function(req, res) {
                 .json(user);
         });
 };
+*/
 
 module.exports.userDataGetOne = function(req, res) {
     // belum buat lagi :P 

@@ -8,10 +8,12 @@ var ctrlArticleData = require('../controllers/articleData.controllers.js');
 router
 	.route('/appData')
 	.get(ctrlAppData.appDataGetAll);
-    
+
+/*    
 router
     .route('/userData')
     .get(ctrlUserData.userDataGetAll);
+*/
 
 router
     .route('/articleData')
