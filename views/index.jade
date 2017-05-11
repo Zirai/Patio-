@@ -1,0 +1,170 @@
+html(ng-app='PatioWeb')
+  head
+    title Welcome to Patio!
+    link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
+    link(rel='stylesheet', type='text/css', href='../css/style.css')
+    link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+
+  body
+    nav.navbar.navbar-default.navbar-fixed-top.nav-color
+      .navbar-inner
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='index')
+              img#logo(alt='Logo', src='../img/Patio.png')
+          #bs-example-navbar-collapse-1.collapse.navbar-collapse
+            ul.nav.navbar-nav
+              li
+                a(href='index') Home
+              li
+                a(href='apps') Apps
+              li
+                a(href='article') Article
+            ul.nav.navbar-nav.navbar-right
+              li
+                a.signup-link( data-target='#login', href='login') Login
+              li
+                a.signup-link( data-target='#signup', href='signup') Sign Up
+
+    #ff-home-leader.ff-fullheight(style='height: 785px;')
+      .ff-fullheight-vertical.middle
+        .container
+          .ff-fullheight-text.right.ff-heavy
+            h1
+              | Long time ago
+              br
+              | in the Palm of Their Hands
+            p.ff-ignore-linebreaks-360px
+              | On the go, or tucked in tight,
+              br
+              | PatioWeb unleashes magics for the lil ones.
+              br
+            p
+              a.btn.btn-default.btn-patio.btn-lg(href='#downloadModal', data-toggle='modal', role='button')
+                | Get the App 
+                span.glyphicon.glyphicon-play
+
+    #ff-home-testimonials.ff-testimonial-carousel.bear-background.ff-blue-module.carousel.slide(data-ride='carousel', data-pause='false', data-interval='4000')
+      // Indicators
+      ol.carousel-indicators.carol
+        li(data-target='#ff-home-testimonials', data-slide-to='0')
+        li(data-target='#ff-home-testimonials', data-slide-to='1')
+        li.active(data-target='#ff-home-testimonials', data-slide-to='2')
+        li(data-target='#ff-home-testimonials', data-slide-to='3')
+      .carousel-inner.module-inner
+        .item
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote “Brain Expander.”
+              .source
+                img(alt='', src='')
+        .item
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote
+                | “
+                span.small If my children only had one app 
+                span THIS would be it.
+                | ”
+              .source — Mom of three
+        .item.active
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote “A Solid Literacy Tool.”
+              .source
+                img(alt='', src='')
+        .item
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote
+                | “
+                span.small Excels not just in its content 
+                span but in its execution.
+                | ”
+              .source
+                img(alt='', src='')
+
+    section#how-it-works.section.section--steps
+      .container.cont-top
+        .row
+          .col-sm-12.col-lg-10.col-lg-push-1
+            .step
+              .row
+                .row__parallel-sm.row__parallel-md.row__parallel-lg
+                  .col-sm-5.col-sm-push-7.col-md-4.col-md-push-8
+                    .step__icon
+                      i.icon.icon--lg.icon--step-gurantee
+                  .col-sm-7.col-sm-pull-5.col-md-8.col-md-pull-4
+                    h2.step__heading Kids Education
+                    p.step__caption.h5
+                      | Free play and guided play—together known as playful learning—are pedagogical tools through which children can learn in joyful and conceptually rich ways
+  
+        .row
+          .col-sm-12.col-lg-10.col-lg-push-1
+            .step
+              .row
+                .row__parallel-sm.row__parallel-md.row__parallel-lg
+                  .col-sm-5.col-md-4
+                    .step__icon
+                      i.icon.icon--lg.icon--step-quote
+                  .col-sm-7.col-md-8
+                    h2.step__heading Parenting
+                    p.step__caption.h5
+                      | Guided play helps children learn to solve problems, persist through challenges, build vocabulary skills, and gain background knowledge in many content areas
+
+        .row
+          .col-sm-12.col-lg-10.col-lg-push-1
+            .step
+              .row
+                .row__parallel-sm.row__parallel-md.row__parallel-lg
+                  .col-sm-5.col-sm-push-7.col-md-4.col-md-push-8
+                    .step__icon
+                      i.icon.icon--lg.icon--step-payment
+                  .col-sm-7.col-sm-pull-5.col-md-8.col-md-pull-4
+                    h2.step__heading Safe & Simple 
+                    p.step__caption.h5
+                      | Your little ones will also learn new vocabulary words and can record themselves reading the books when they’ve finished! iPad, iPhone, iPod Touch, Android; free with first e-book.!
+
+
+              
+    
+    .users.footer
+      .content
+        .columns
+          .column.patio
+            .title
+              h4 Patio
+              .underline
+            ul.footer-links
+              li
+                a.link(href='#') About us
+              li
+                a.link(href='#') Contact us
+              li
+                a.link(href='#') Blog
+              li
+                a.link(href='#') Join us
+
+          .column.about-us
+            .title
+              h4 About Us
+              .underline
+            p.text Hi Hello and Bye
+              
+     
+
+  // 2. Load our 'modules'
+  //script(src='http://html5shiv.googlecode.com/svn/trunk/html5.js')
+  //script(src='public/lib/jquery/dist/jquery.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.min.js')
+  script(src='/js/bootstrap.js')
+  script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js') 
+  script(src='/javascripts/home.client.controller.js')
+  script(src='/javascripts/main.js')
