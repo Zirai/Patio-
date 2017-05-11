@@ -5,6 +5,28 @@ html(ng-app='PatioWeb')
     link(rel='stylesheet', type='text/css', href='../css/bootstrap.min.css')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
+    script.
+      //var PatioWeb = angular.module('PatioWeb', ['ngRoute']);
+      PatioWeb.config(function($routeProvider) {
+        $routeProvider.when('/home', {
+          controller:'homeController',
+          templateUrl: 'views/index.jade',
+          controllerAs: 'vm'
+        })
+        .when('/articleData', {
+          controller:'ArticleController',
+          templateUrl: 'views/article.jade',
+          controllerAs: 'vm'
+        })
+        .when('/appData', {
+          controller:'AppsController',
+          templateUrl: 'views/apps.jade',
+          controllerAs: 'vm'
+        })
+        .otherwise({
+          redirectTo: '/'
+        })
+      });
 
   body
     nav.navbar.navbar-default.navbar-fixed-top
@@ -51,7 +73,49 @@ html(ng-app='PatioWeb')
           .ff-appcover
             a(href='')
               img.thumb(alt='Luke and Lexi Ladybug', src='https://cdn.farfaria.com/uploads/story/cover_art/5006f2a25cb6950002000008/small_320_luke_and_lexi_1_9614.jpg')
-          
+
+    #ff-home-testimonials.ff-testimonial-carousel.bear-background.ff-blue-module.carousel.slide(data-ride='carousel', data-pause='false', data-interval='4000')
+      // Indicators
+      ol.carousel-indicators
+        li(data-target='#ff-home-testimonials', data-slide-to='0')
+        li(data-target='#ff-home-testimonials', data-slide-to='1')
+        li.active(data-target='#ff-home-testimonials', data-slide-to='2')
+        li(data-target='#ff-home-testimonials', data-slide-to='3')
+      .carousel-inner.module-inner
+        .item
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote “Brain Expander.”
+              .source
+                img(alt='', src='')
+        .item
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote
+                | “
+                span.small If my children only had one app 
+                span THIS would be it.
+                | ”
+              .source — Mom of three
+        .item.active
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote “A Solid Literacy Tool.”
+              .source
+                img(alt='', src='')
+        .item
+          .ff-vertical-container
+            .ff-vertical.middle
+              .quote
+                | “
+                span.small Excels not just in its content 
+                span but in its execution.
+                | ”
+              .source
+                img(alt='', src='')
+
+
+
 
     section#learn-more.listApp.bg-apps
       header.intro.intro-apps
@@ -66,7 +130,7 @@ html(ng-app='PatioWeb')
           img.group.list-group-image(src='http://placehold.it/400x250/000/fff', alt='')
           .caption
             h4.group.inner.list-group-item-heading
-              | Product title
+              | {{appData.id}}
             p.group.inner.list-group-item-text
               | Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
               | sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.

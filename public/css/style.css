@@ -254,11 +254,11 @@ figure{
 /*==================================================================Footer*/
 .users.footer
 {
-	padding: 20px;
 	background-color:#303236;
+	
 }
 .users.footer .content{
-	max-width: 1200px;
+	max-width: 1000px;
 	margin:0 auto;
 }
 
@@ -269,6 +269,7 @@ figure{
 
 .users.footer .content .column{
 	padding: 20px 30px;
+	min-height: 100px;
 
 }
 
@@ -278,9 +279,9 @@ figure{
 	color: #d8dade;
 	font-size: 18px;
 }
-.users.footer .patio .underline{
+.underline{
 	width: 30px;
-	height: 5px;
+
 	border-bottom: 2px solid #B54321;
 }
 
@@ -325,6 +326,7 @@ figure{
 .container.topapps {
 	padding-bottom: 30px;
 	max-width:700px;
+	min-height: 400px;
 }
 
 .content{

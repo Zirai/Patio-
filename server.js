@@ -7,6 +7,9 @@ var mongoose = require('mongoose');
 var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 
+// include routing for page
+var routes = require('./routing');
+
 // include the routing for api 
 var apiRoute = require('./api/apiRoute');
 
@@ -52,6 +55,16 @@ app.use('/api', apiRoute);
 
 // BELOW ARE PAGE ROUTINGS
 /*
+
+// use routing for page
+app.use('/', routes);
+
+// routing for API 
+app.use('/api', apiRoute);
+
+/*
+// set the home page route
+
 app.get('/', function(req, res) {
 	res.render('index');
 });
@@ -76,6 +89,8 @@ app.get('/signup', function(req, res) {
     res.render('signup');
 });
 */
+
+
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });
