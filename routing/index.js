@@ -23,8 +23,16 @@ router.get('/login', function(req, res) {
     res.render('login');
 });
 
-router.post('login', passport.authenticate('local'), function(req, res) {
+router.post('/login', passport.authenticate('local'), function(req, res) {
    res.redirect('/'); 
+});
+
+router.post('/androidLogin', passport.authenticate('local'), function(req, res) {
+    if(err) {
+        res.json({Code: 500});
+    }
+
+    res.json({Code: 200});
 });
 
 router.get('/signup', function(req, res) {
