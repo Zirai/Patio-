@@ -46,9 +46,9 @@ html(ng-app='PatioWeb')
                 a(href='article') Article
             ul.nav.navbar-nav.navbar-right
               li
-                a.signup-link( data-target='#login', href='login') Login
+                a.signup-link( data-target='#login', href='loginPage') Login
               li
-                a.signup-link( data-target='#signup', href='signup') Sign Up
+                a.signup-link( data-target='#signup', href='signupPage') Sign Up
                 
     #ff-catalog-header
       .gradient
@@ -71,108 +71,63 @@ html(ng-app='PatioWeb')
             a(href='')
               img.thumb(alt='Luke and Lexi Ladybug', src='https://cdn.farfaria.com/uploads/story/cover_art/5006f2a25cb6950002000008/small_320_luke_and_lexi_1_9614.jpg')
 
-
-    #ff-home-testimonials.ff-testimonial-carousel.bear-background.ff-blue-module.carousel.slide(data-ride='carousel', data-pause='false', data-interval='4000')
-      // Indicators
-      ol.carousel-indicators
-        li(data-target='#ff-home-testimonials', data-slide-to='0')
-        li(data-target='#ff-home-testimonials', data-slide-to='1')
-        li.active(data-target='#ff-home-testimonials', data-slide-to='2')
-        li(data-target='#ff-home-testimonials', data-slide-to='3')
-      .carousel-inner.module-inner
-        .item
-          .ff-vertical-container
-            .ff-vertical.middle
-              .quote “Brain Expander.”
-              .source
-                img(alt='', src='')
-        .item
-          .ff-vertical-container
-            .ff-vertical.middle
-              .quote
-                | “
-                span.small If my children only had one app 
-                span THIS would be it.
-                | ”
-              .source — Mom of three
-        .item.active
-          .ff-vertical-container
-            .ff-vertical.middle
-              .quote “A Solid Literacy Tool.”
-              .source
-                img(alt='', src='')
-        .item
-          .ff-vertical-container
-            .ff-vertical.middle
-              .quote
-                | “
-                span.small Excels not just in its content 
-                span but in its execution.
-                | ”
-              .source
-                img(alt='', src='')
-
-
-
-
     section#learn-more.listApp.bg-apps
       header.intro.intro-apps
         .container
           h1 Everything you need to drive your kids to be better
-          p
-            | PatioWeb helps you teach your kids and to be more realistic thinker
+          h4
+            | Patio helps you teach your kids and to be more realistic thinker
 
     #products.row.list-group
       .item.col-xs-4.col-lg-4
         .thumbnail
           img.group.list-group-image(src='../img/bitmap1.png', alt='')
           .caption
-            h4.group.inner.list-group-item-heading
-              | {{appData.id}}
+            h2.group.inner.list-group-item-heading
+              | Gorilla view
             p.group.inner.list-group-item-text
               | Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
               | sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             .row
               .col-xs-12.col-md-6
                 p.lead
-                  | $21.000
+                  | RM 11.00
               .col-xs-12.col-md-6
                 a.btn.btn-success(href='', ng-click="toogle1 = !toogle1") {{toogle1 && 'unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
           img.group.list-group-image(src='', alt='')
           .caption
-            h4.group.inner.list-group-item-heading
-              | Product title
+            h2.group.inner.list-group-item-heading
+              | Spin'zer
             p.group.inner.list-group-item-text
               | Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
               | sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
             .row
               .col-xs-12.col-md-6
                 p.lead
-                  | $21.000
+                  | RM 3.00
               .col-xs-12.col-md-6
                 a.btn.btn-success(href='', ng-click="toogle2 = !toogle2") {{toogle2 && 'Unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
           img.group.list-group-image(src='', alt='')
           .caption
-            h4.group.inner.list-group-item-heading
-              | Product title
+            h2.group.inner.list-group-item-heading
+              | Bubadu
             p.group.inner.list-group-item-text
-              | Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
-              | sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+              | Bubadu is a developer studio that has released a ton of kids games. They’re not all amazing, but a good number of them are worth checking out. Best educational app
             .row
               .col-xs-12.col-md-6
                 p.lead
-                  | $21.000
+                  | RM 2.11
               .col-xs-12.col-md-6
                 a.btn.btn-success(href='', ng-click="toogle3 = !toogle3") {{toogle3 && 'Unsubscribe' || 'Subscribe'}}
       .item.col-xs-4.col-lg-4
         .thumbnail
           img.group.list-group-image(src='', alt='')
           .caption
-            h4.group.inner.list-group-item-heading
+            h2.group.inner.list-group-item-heading
               | Product title
             p.group.inner.list-group-item-text
               | Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -187,7 +142,7 @@ html(ng-app='PatioWeb')
         .thumbnail
           img.group.list-group-image(src='', alt='')
           .caption
-            h4.group.inner.list-group-item-heading
+            h2.group.inner.list-group-item-heading
               | Product title
             p.group.inner.list-group-item-text
               | Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
@@ -202,7 +157,7 @@ html(ng-app='PatioWeb')
         .thumbnail
           img.group.list-group-image(src='', alt='')
           .caption
-            h4.group.inner.list-group-item-heading
+            h2.group.inner.list-group-item-heading
               | Product title
             p.group.inner.list-group-item-text
               | Product description... Lorem ipsum dolor sit amet, consectetuer adipiscing elit,

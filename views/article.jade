@@ -27,9 +27,9 @@ html(ng-app='PatioWeb')
                 a(href='article') Article
             ul.nav.navbar-nav.navbar-right
               li
-                a.signup-link( data-target='#signup', href='login') Login
+                a.signup-link( data-target='#signup', href='loginPage') Login
               li
-                a.signup-link( data-target='#signup', href='signup') Sign Up
+                a.signup-link( data-target='#signup', href='signupPage') Sign Up
 
 
     main.blogIndex.app__topPad
@@ -64,18 +64,17 @@ html(ng-app='PatioWeb')
                   | Over the past several years, social media, education blogs, and state education policies have been increasingly discussing STEM
             .blogPostPreview.blog__container
               figure.blog__mainImage
-                img.image.blog__mainImageImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=700', srcset='https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=700 1x, https://www.curiousworld.com/assets/lkg5uoo2te2j/13qzKFBtpMQakeqoE0A8Mq/31b7ba9c1995bbd6d80749ba7e44b930/bigstock-Girl-Planting-Flower-Seeds-Int-101070113.jpg?fl=progressive&fm=jpg&q=80&w=1400 2x', width='700', alt='Little girl planting seeds in pots')
+                img.image.blog__mainImageImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/3l2Dd8JMCAA0mG4iMuAqOS/2e97d7c27dbd813df2de6e39713600ae/bigstock-Asian-Chinese-Little-Girl-Play-176500975.jpg?fl=progressive&fm=jpg&q=80&w=700', width='700', alt='Little girl planting seeds in pots')
               .pageHeading
                 h2.pageHeading__subtitle
                   | Family Activities
                 h1.pageHeading__title
-                  | How to Turn Your Family Garden into a Learning Adventure
+                  | 5 Fun Patio Projects for Little Kids
               .blog__content
                 p
-                  | It looks like spring
-                  |  has finally arrived. In some areas of the country, we thought it would never get here. Is your green thumb starting to itch? Whether you create a small…
+                  | The fun movement has taken root in our culture over the past several years. You may be aware of the acronym, but wonder what it means. STEAM stands for 
           .blogLayout__sidePane
-            .blogLayout__sidePaneBox
+            .blogLayout__sidePaneBox.blog
               h1.blogLayout__sidePaneHeading
                 a(href='/blog', style='text-decoration:none;')
                   span.blogLayout__sidePaneHeading1 PatioWeb
@@ -104,6 +103,7 @@ html(ng-app='PatioWeb')
                   img(src='../img/utube.png', alt='Youtube', width='36', height='36')
             a.blogLayout__sidePaneCta(href='/subscribe/register' style='text-decoration:none;')
               .blogLayout__sidePaneBox.blogLayout__sidePaneBox--grey
+                img.blogLayout__sidePaneCtaLogo(src='../img/Patio.png', alt='Curious World', width='300', height='170', data-reactid='819')
                 img.image.blogLayout__sidePaneCtaImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=189&w=333', srcset='https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=189&w=333 1x, https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=378&w=666 2x', width='333', height='189', alt='Try the Curious World app for iPhone & iPad.')
                 h3.blogLayout__sidePaneCtaHeading Learn to Patio
                 p

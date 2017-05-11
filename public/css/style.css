@@ -8,7 +8,7 @@ header, section, footer, aside, nav, article, figure, figcaption div {
   display:block;
 }
 html, body{
-	background-color:white;
+	background-color:#e8e9ed;
 	margin:0 auto;
 	height: 100%;
 	width: 100%;
@@ -19,13 +19,18 @@ html, body{
 	letter-spacing: 0.5px;
 	text-decoration: none;	
 }
-
+/*=====================================Header*/
 #logo{
 	width: 130px;
 	margin-top: -30px;
-
 }
-
+.navbar-inner{
+	background-color: #FFCC66;
+}
+.nav.navbar-nav{
+	font-size: 20px;
+	color: inherit;
+}
 
 /*==============================================First section*/
 
@@ -45,7 +50,7 @@ html, body{
     background-position: 80% center;
     background-repeat: no-repeat;
     max-height: 80vw;
-    min-height: 400px;
+    min-height: 200px;
 	}
 }
 
@@ -109,7 +114,7 @@ html, body{
 	bottom: 10px;
 	left: 50%;
 	z-index: 15;
-	height: 20%;
+	height: 10%;
 	padding-left: 0;
 	margin-left: -30%;
 	text-align: center;
@@ -137,13 +142,6 @@ ol {
 .module-inner{
     background: radial-gradient(ellipse at center, rgba(99,198,244,0.8) 0%,rgba(57,138,187,0.8) 100%);
 }
-/*.ff-testimonial-carousel.item{
-	text-align: center;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 30px;
-    font-size: 40px;
-}*/
 
 
 .ff-vertical-container{
@@ -160,14 +158,17 @@ ol {
 	margin-top: 60px;
 }
 
-
 .carousel-inner {
 	position: relative;
 	width: 100%;
-	height: 50%;
+	height: 300px;
 	overflow: hidden;
 }
 
+.ff-testimonial-carousel .item .source {
+    font-size: 0.33em;
+	text-align: center;
+}
 
 
 
@@ -218,18 +219,35 @@ ol {
     margin: 0 auto 20px;
     background-color: #FFCC66;
     border-radius: 50%;
+	background-image: url('../img/snow.png');
 }
 
-.step__icon.icon{
+.step__icon2 {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    margin: 0 auto 20px;
+    background-color: #FFCC66;
+    border-radius: 50%;
+	background-image: url('../img/rocket.png');
+}
+
+.step__icon3 {
+    position: relative;
+    width: 225px;
+    height: 225px;
+    margin: 0 auto 20px;
+    background-color: #FFCC66;
+    border-radius: 50%;
+	background-image: url('../img/tree.png');
+}
+
+.icon{
 	position: absolute;
 	left: 50%;
 	top: 50%;
 	transform: translateX(-50%) translateY(-50%);
-}
-
-.icon--step-bond-guarantee{
-	background-image: url("");
-	background-repeat: no-repeat;
+	
 }
 
 .icon-lg{
@@ -323,7 +341,6 @@ figure{
 }
 .underline{
 	width: 30px;
-
 	border-bottom: 2px solid #B54321;
 }
 
@@ -441,6 +458,9 @@ img{
 	margin-bottom: 50px;
 }
 
+.intro-apps h1{
+	font-size:40px ;
+}
 .group.list-group-image{
 	height: 300px;
 	width: 600px;
@@ -450,6 +470,18 @@ img{
 	 width: 100%;
 	 margin:0 auto;
  }
+
+.btn-success{
+	border-bottom: 4px solid #B54321;
+	font-size: 20px;
+}
+
+#products.row.list-group{
+	margin-bottom: 150px;
+}
+
+
+
 
 /*=================================================================article page*/
 
@@ -569,7 +601,7 @@ a{
 	border-radius: 4px;
 	padding: 10px;
 	margin-bottom: 20px;
-	background:#dce1e8;
+	background:#aabbff;
 }
 
 .blogLayout__sidePaneHeading {
