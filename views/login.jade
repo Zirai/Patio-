@@ -33,14 +33,14 @@ html(ng-app='PatioWeb')
     #push-before
         .container.ff-neue-form.narrow
             .wrapper
-            form.form-signin
+            form.form-signin(action='/login', method='post')
                 h2.form-signin-heading Please login
                 input.form-control(type='text', name='username', placeholder='Username', required='', autofocus='')
                 input.form-control(type='password', name='password', placeholder='Password', required='')
                 label.checkbox
                 input#rememberMe(type='checkbox', value='remember-me', name='rememberMe')
                 |  Remember me
-                button.btn.btn-lg.btn-primary.btn-block(type='loginPage') Login
+                button.btn.btn-lg.btn-primary.btn-block(type='submit', ) Login
 
         #devise_shared_links(style='margin-top: 10px; margin-bottom: 10px;')
             a(href='signupPage') Register
