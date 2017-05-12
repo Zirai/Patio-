@@ -476,6 +476,11 @@ img{
 	font-size: 20px;
 }
 
+.btn-success:hover{
+	border-bottom: 4px solid #B54321;
+
+}
+
 #products.row.list-group{
 	margin-bottom: 150px;
 }
