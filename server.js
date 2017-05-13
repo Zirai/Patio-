@@ -2,8 +2,15 @@ require('./api/data/db.js');
 var express = require('express');
 var app = express();
 var path = require('path');
-var bodyParser = require('body-parser');
+
 var mongoose = require('mongoose');
+var passport = require('passport');
+var flash    = require('connect-flash');
+
+var morgan       = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser   = require('body-parser');
+var session      = require('express-session');
 
 // include routing for page
 var routes = require('./routing');
@@ -15,7 +22,7 @@ var apiRoute = require('./api/apiRoute');
 // process.env.PORT lets the port be set by Heroku
 
 var port = process.env.PORT || 1337;
-
+require('./config/passport')(passport);
 // set the view engine to jade 
 app.set('view engine', 'jade');
 
@@ -36,18 +43,26 @@ app.use(function(req, res, next) {
 });
 */
 
+app.use(morgan('dev')); // log every request to the console
+app.use(cookieParser()); // read cookies (needed for auth)
+
 app.use(bodyParser.urlencoded({
     extended: true
   }));
   
 app.use(bodyParser.json());
 
-// general page routing
-app.use('/', routes);
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
+
+// // general page routing
+// app.use('/', routes);
 
 // routing for API
 app.use('/api', apiRoute);
-
+require('./routing/index.js')(app, passport);
 app.listen(port, function() {
 	console.log('Our app is running on http://localhost:' + port);
 });

@@ -15,12 +15,11 @@ module.exports.subscriberDataGetAll = function(req, res) {
 };
 */
 
-module.exports.subscriberDataGetOne = function(req, res) {
-    var username = req.params.username;
+module.exports.subscribedApp = function(req, res) {
 	console.log('GET Username', username);
 	
 	Subscriber
-		.find({'username': username})
+		.find({'username': req.user.username})
 		.then(function(subscriptions){
 			var arr = [];
 			for(var a = 0; a < subscriptions.length; a ++){

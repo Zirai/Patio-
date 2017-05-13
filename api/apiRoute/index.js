@@ -27,7 +27,7 @@ router
 */
 
 router
-	.route('/subscriber/:username')
+	.route('/subscribedApp')
 	.get(ctrlSubscriberData.subscriberDataGetOne);
 	
 module.exports = router;
