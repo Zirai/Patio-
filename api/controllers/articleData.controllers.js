@@ -12,10 +12,3 @@ module.exports.articleDataGetAll = function(req, res) {
         });
 };
 
-module.exports.articleDataGetOne = function(req, res) {
-    // belum buat lagi :P 
-};
-
-module.exports.articleDataAddOne = function(req, res) {
-    // belum buat lagi :P 
-};

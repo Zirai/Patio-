@@ -17,7 +17,4 @@ var articleSchema = new Schema({
     }
 });
 
-
-// mongoose.model('Article', articleSchema, 'article');
-
 mongoose.model('Article', articleSchema);

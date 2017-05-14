@@ -35,16 +35,9 @@ app.use("/javascripts", express.static("./public/js"));
 //set the angular directory
 app.set('views', __dirname + '/views');
 
-// add middleware to console log every request
-/*
-app.use(function(req, res, next) {
-	console.log(req.method, req.url);
-	next();
-});
-*/
 
-app.use(morgan('dev')); // log every request to the console
-app.use(cookieParser()); // read cookies (needed for auth)
+app.use(morgan('dev'));
+app.use(cookieParser());
 
 app.use(bodyParser.urlencoded({
     extended: true
@@ -52,15 +45,11 @@ app.use(bodyParser.urlencoded({
   
 app.use(bodyParser.json());
 
-app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(session({ secret: 'patio' }));
 app.use(passport.initialize());
-app.use(passport.session()); // persistent login sessions
-app.use(flash()); // use connect-flash for flash messages stored in session
+app.use(passport.session());
+app.use(flash());
 
-// // general page routing
-// app.use('/', routes);
-
-// routing for API
 app.use('/api', apiRoute);
 require('./routing/index.js')(app, passport);
 app.listen(port, function() {

@@ -26,37 +26,10 @@ module.exports = function(app, passport) {
 	    res.render('login');
 	});
 
-	// app.post('/login', function(req, res) {
-	// 	if(!req.body.username || !req.body.password || !req.body || req.body === null || req.body.password === null || req.body.username === null)
-	// 	{
-	// 		return res.send("You left out some field blank! Please fill in the field!");
-	// 	}
-		
-	// 	var find = User.findOne(req.body).exec();
-
-	// 		find
-	// 		.then(function(data){
-	// 			// if(user) {
-	// 				// console.log("got user lo wei");
-	// 				// res.send(user);
-	// 			// }
-	// 			// else {
-	// 				// console.log("no user lo wei");
-	// 				// res.send("no user");
-	// 			// }
-	// 			if(data === null) res.json("Null data");
-	// 			else res.send(data);
-	// 		})
-	// 		.catch(function(err){
-	// 			// console.log("got error lo wei");
-	// 			res.send(err);
-	// 		}); 
-	// });
-
 	app.post('/login', passport.authenticate('local-login', {
         // successRedirect : '/', // redirect to the secure profile section
         // failureRedirect : '/loginPage', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
+        failureFlash : true 
     }), function(req, res){
 		res.send(req.user)
     });
@@ -108,44 +81,20 @@ module.exports = function(app, passport) {
 	app.post('/signup', passport.authenticate('local-signup', {
         // successRedirect : '/', // redirect to the secure profile section
         // failureRedirect : '/signupPage', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
+        failureFlash : true 
     }));
-
-	// app.post('/signup', function(req, res) {
-	//     var username = req.body.username;
-	//     var password = req.body.password;
-	// 	if(!req.body.username || !req.body.password || !req.body || req.body === null || req.body.password === null || req.body.username === null)
-	// 	{
-	// 		return res.json("You left out some field blank! Please fill in the field!");
-	// 	}
-	// 	User.create(req.body)
-	// 		.then(function(user){
-	// 			return res.json("Successfully signed up!");
-	// 		})
-	// 		.catch(function(err){
-	// 			return res.json(err);
-	// 		});
-	// });
 
 	app.get('/logout', function(req, res) {
 	    req.logout();
 	    res.redirect('/');
 	});
 
-
-
-
-
 };
 
-// route middleware to make sure a user is logged in
 function isLoggedIn(req, res, next) {
 
-    // if user is authenticated in the session, carry on 
     if (req.isAuthenticated())
         return next();
-
-    // if they aren't redirect them to the home page
     res.redirect('/');
 }
 

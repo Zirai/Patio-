@@ -19,7 +19,5 @@ var appSchema = new Schema({
     }
 });
 
-// mongoose.model('App', appSchema, 'app');
-
 mongoose.model('App', appSchema);
 

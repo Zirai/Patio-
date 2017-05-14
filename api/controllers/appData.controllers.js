@@ -12,11 +12,3 @@ module.exports.appDataGetAll = function(req, res) {
                 .json(app);
         });
 };
-
-module.exports.appDataGetOne = function(req, res) {
-    // belum buat lagi :P
-};
-
-module.exports.appDataAddOne = function(req, res) {
-    // belum buat lagi :P
-};

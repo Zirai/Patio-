@@ -3,18 +3,6 @@ var mongoose = require('mongoose');
 var Subscriber = mongoose.model('Subscriber');
 var App = mongoose.model('App');
 
-/*
-module.exports.subscriberDataGetAll = function(req, res) {
-    Subscriber
-        .find()
-        .exec(function(err, subs) {
-            console.log("Found subscribers", subs.length);
-            res
-                .json(subs);
-        });
-};
-*/
-
 module.exports.subscribedApp = function(req, res) {
 	console.log('GET Username', username);
 	
@@ -35,8 +23,4 @@ module.exports.subscribedApp = function(req, res) {
 		.catch(function(err){
 			res.send(err);
 		})
-};
-
-module.exports.subscriberDataAddOne = function(req, res) {
-    // belum buat lagi :P 
 };
