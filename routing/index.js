@@ -31,11 +31,11 @@ module.exports = function(app, passport) {
         // failureRedirect : '/loginPage', // redirect back to the signup page if there is an error
         failureFlash : true 
     }), function(req, res){
-		res.send(req.user)
+		res.json(req.user)
     });
 
     app.post('/androidLogin', passport.authenticate('local-login'), function(req, res){
-    	res.send(req.user);
+    	res.json(req.user);
     });
 
 	app.get('/subscribePage', function(req, res) {
@@ -82,7 +82,9 @@ module.exports = function(app, passport) {
         // successRedirect : '/', // redirect to the secure profile section
         // failureRedirect : '/signupPage', // redirect back to the signup page if there is an error
         failureFlash : true 
-    }));
+    }),function(req, res){
+		res.json(req.user)
+    });
 
 	app.get('/logout', function(req, res) {
 	    req.logout();

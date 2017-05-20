@@ -17,10 +17,10 @@ module.exports.subscribedApp = function(req, res) {
 			App
 				.find({ 'appName': { $in :arr } })
 				.then(function(app){
-					res.send(app);
+					res.json(app);
 				})
 		})
 		.catch(function(err){
-			res.send(err);
+			res.json(err);
 		})
 };
