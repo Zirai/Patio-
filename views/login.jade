@@ -5,7 +5,7 @@ html(ng-app='PatioWeb')
     link(rel='stylesheet', type='text/css', href='../css/style.css')
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
 
-  body
+  body(ng-controller='LoginController')
     nav.navbar.navbar-default.navbar-fixed-top.nav-color
       .navbar-inner
         .container
@@ -33,14 +33,15 @@ html(ng-app='PatioWeb')
     #push-before
         .container.ff-neue-form.narrow
             .wrapper
-            form.form-signin(action='/login', method='post')
+            form( ng-hide='vm.message', name='form', ng-submit='vm.login()').form-signin
                 h2.form-signin-heading Please login
-                input.form-control(type='text', name='username', placeholder='Username', required='', autofocus='')
-                input.form-control(type='password', name='password', placeholder='Password', required='')
+                h4 Welcome : {{user.username}}
+                input.form-control(type='text',id='username', name='username', placeholder='Username',ng-model="user.username", required='', autofocus='')
+                input.form-control(type='password',id='password', name='password', placeholder='Password',ng-model="user.password", required='')
                 label.checkbox
                 input#rememberMe(type='checkbox', value='remember-me', name='rememberMe')
                 |  Remember me
-                button.btn.btn-lg.btn-primary.btn-block(type='submit', ) Login
+                button.btn.btn-lg.btn-primary.btn-block(type='submit',id="submit",ng-disabled='form.$invalid' ) Login
 
         #devise_shared_links(style='margin-top: 10px; margin-bottom: 10px;')
             a(href='signupPage') Register
@@ -86,3 +87,16 @@ html(ng-app='PatioWeb')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js') 
   script(src='/javascripts/home.client.controller.js')
   script(src='/javascripts/main.js')
+  script.
+    var PatioWeb = angular.module('PatioWeb', []);
+    PatioWeb.controller('LoginController', function($scope, $http, $location){
+    $('#submit').click(function(){
+      if(username == "" || password ==""){
+        alert('Please login ');
+      }
+      else{
+        alert('You have successfully Login. Welcome to Patio');
+      }
+      
+    });
+    });

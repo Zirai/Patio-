@@ -55,7 +55,7 @@ html(ng-app='PatioWeb')
         .container
           .ff-heavy.content
             img(alt='Catalog_bird', src='')
-            h1 Discover Unlimited Apps
+            h1 Discover Unlimited Apps
             p(style='padding-bottom: 20px;')
               | Unlimited access to over apps
               br
@@ -205,5 +205,18 @@ html(ng-app='PatioWeb')
   script(src='/javascripts/App.controller.js')
   script(src='/javascripts/main.js')
   script.
-
+   var PatioWeb = angular.module('PatioWeb', []);
+   PatioWeb.controller('AppsController', ['$scope',' $http', '$location', '$routeParamsfunction', function($scope, $http, $location, $routeParams){
+   $scope.getApps = function(){
+   $http.get(api/appData).success(function(response){
+   $scope.apps = response;
+   });
+   }
+   $scope.toogle1 = true;
+   $scope.toogle2 = true;
+   $scope.toogle3 = true;
+   $scope.toogle4 = true;
+   $scope.toogle5 = true;
+   $scope.toogle6 = true;
+   }]);
 

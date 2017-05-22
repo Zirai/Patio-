@@ -76,18 +76,18 @@ html(ng-app='PatioWeb')
           .blogLayout__sidePane
             .blogLayout__sidePaneBox.blog
               h1.blogLayout__sidePaneHeading
-                a(href='/blog', style='text-decoration:none;')
+                a(href='/index', style='text-decoration:none;')
                   span.blogLayout__sidePaneHeading1 PatioWeb
               p.blogLayout__description Get advice and inspiration for how to spark a love of learning in our kids!
               hr
               h2.blogLayout__sidePaneSubheading Select a topic
               ul.blogLayout__categories
                 li.blogLayout__category
-                  a(href='/blog/category/family-activities', style='text-decoration:none;') Family Activities
+                  a(href='https://www.google.com/search?q=parent+activites&oq=parent+activites&aqs=chrome..69i57j0l5.7337j0j7&sourceid=chrome&ie=UTF-8#q=parent+activities',target='_blank', style='text-decoration:none;') Family Activities
                 li.blogLayout__category
-                  a(href='/blog/category/parenting-tips', style='text-decoration:none;') Parenting Tips
+                  a(href='http://www.parents.com/parenting/better-parenting/advice/ways-to-be-fantastic-parent/', target='_blank',style='text-decoration:none;') Parenting Tips
                 li.blogLayout__category
-                  a(href='/blog/category/top-book-picks', style='text-decoration:none;') Top Article Picks
+                  a(href='https://www.curiousworld.com/blog/category/top-book-picks',target='_blank', style='text-decoration:none;') Top Article Picks
             .blogLayout__sidePaneBox.blogLayout__sidePaneBox--grey
               p.blogLayout__connect Connect with us
               .socialIcons
@@ -101,7 +101,7 @@ html(ng-app='PatioWeb')
                   img(src='../img/twt.png', alt='Twitter', width='36', height='36')
                 a.ext-link.socialIcons__socialIcon(target='_blank', rel='noopener noreferrer', href='')
                   img(src='../img/utube.png', alt='Youtube', width='36', height='36')
-            a.blogLayout__sidePaneCta(href='/subscribe/register' style='text-decoration:none;')
+            a.blogLayout__sidePaneCta(href='http://pbskids.org/games/',target='_blank' style='text-decoration:none;')
               .blogLayout__sidePaneBox.blogLayout__sidePaneBox--grey
                 img.blogLayout__sidePaneCtaLogo(src='../img/Patio.png', alt='Curious World', width='300', height='170', data-reactid='819')
                 img.image.blogLayout__sidePaneCtaImg(src='https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=189&w=333', srcset='https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=189&w=333 1x, https://www.curiousworld.com/assets/lkg5uoo2te2j/bGMiJQJWtqsyysg4CWuOc/40492ddb234cc4ec2b450ae766b89188/cw_ios.png?h=378&w=666 2x', width='333', height='189', alt='Try the Curious World app for iPhone & iPad.')
@@ -154,4 +154,5 @@ html(ng-app='PatioWeb')
   script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-resource.min.js') 
   script(src='/javascripts/article.controller.js')
   script(src='/javascripts/main.js')
-
+  script(src='/javascripts/signup.controller.js')
+  script(src='/javascripts/App.controller.js')

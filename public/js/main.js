@@ -1,4 +1,4 @@
-var PatioWeb = angular.module('PatioWeb', ['ngRoute']);
+var PatioWeb = angular.module('PatioWeb', ['ngRoute', 'ngResource', 'ngSanitize']);
 
 PatioWeb.config(function($routeProvider) {
   $routeProvider.when('/', {
@@ -14,6 +14,16 @@ PatioWeb.config(function($routeProvider) {
   .when('/appData', {
     controller:'AppsController',
     templateUrl: 'views/apps.jade',
+    controllerAs: 'vm'
+  })
+  .when('/login', {
+    controller:'LoginController',
+    templateUrl: 'views/login.jade',
+    controllerAs: 'vm'
+  })
+  .when('/signup', {
+    controller:'SignupController',
+    templateUrl: 'views/signup.jade',
     controllerAs: 'vm'
   })
   .otherwise({
